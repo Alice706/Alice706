@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ajax和json以及jsonP | Hexo</title>
+  <title>ajax和json以及jsonp | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一级标题二级标题">
+  <meta name="description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ajax和json以及jsonP">
+<meta property="og:title" content="ajax和json以及jsonp">
 <meta property="og:url" content="http://yoursite.com/2017/08/04/ajax和json以及jsonP/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一级标题二级标题">
-<meta property="og:updated_time" content="2017-08-04T11:18:41.906Z">
+<meta property="og:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
+<meta property="og:updated_time" content="2017-08-04T14:41:45.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ajax和json以及jsonP">
-<meta name="twitter:description" content="一级标题二级标题">
+<meta name="twitter:title" content="ajax和json以及jsonp">
+<meta name="twitter:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -77,7 +77,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ajax和json以及jsonP
+      ajax和json以及jsonp
     </h1>
   
 
@@ -85,7 +85,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2>
+        <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
+<li><strong>目的</strong>:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
+<li><strong>限制</strong><div style="background-color:#eee; padding:10px">    1. cookie、localStorage 和 indexDB无法读取<br>  2. dom 无法获取<br>  3. AJAX 请求不能发送 </div>       </li>
+<li><strong>规定</strong>：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        </li>
+<li><strong>同源</strong>：协议、域名、端口号完全一致</li>
+<li><strong>url的组成</strong>：协议 域名 端口号 路径 参数 哈希值</li>
+<li><strong>同源策略阮一峰的博客有写</strong></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="external">链接到阮一峰的博客</a></li>
+</ul>
+<hr>
+<h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
+<ol>
+<li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
+<li><strong>ajax解决同源策略的方案</strong><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div>
+</li>
+</ol>
+<hr>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
+<li>JSON是一种轻量级的数据交换格式，用于在浏览器和服务器之间交换信息，本质是字符串</li>
+<li>JSON和JS对象互转<br>对象转换成JSON字符串：var json=JSON.stringify();<br>JSON转换成对象：var obj=JSON.parse();</li>
+</ul>
+<hr>
+<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><ol>
+<li>与jsonp息息相关的是script标签，而xhr即ajax与之没有半毛钱关系</li>
+<li>由于同源策略的限制，XmlHttpRequest（浏览器的内置对象，用来与后台交互信息）只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求，这就是jsonp的核心。</li>
+<li><strong>jsonp是非官方跨域数据交互协议</strong></li>
+<li><strong>可以跨域的标签</strong>：在浏览器中，对于标签 script、img、iframe、link 等标签都可以跨域加载资源，而不受同源策略的限制。这些带有“src”属性的标签每次加载的时候，实际上是由浏览器发起一个get请求</li>
+</ol>
+<hr>
+<h2 id="json和jsonp的比较"><a href="#json和jsonp的比较" class="headerlink" title="json和jsonp的比较"></a>json和jsonp的比较</h2><ul>
+<li>JSON是一种数据格式，JSONP是一种数据调用方式</li>
+<li>json是理想的数据交换格式，但没办法跨域直接获取，于是就将json包裹(padding)在一个合法的js语句中作为js文件传过去。这就是json和jsonp的区别，json是想要的东西，jsonp是达到这个目的而普遍采用的一种方法，当然最终获得和处理的还是json。所以说json是目的，jsonp只是手段。json总会用到，而jsonp只有在跨域获取数据才会用到。<h2 id="ajax和jsonp的对比"><a href="#ajax和jsonp的对比" class="headerlink" title="ajax和jsonp的对比"></a>ajax和jsonp的对比</h2></li>
+</ul>
+<ol>
+<li>相同点：都是请求一个url</li>
+<li>不同点：AJAX是通过XMLHTTPREQUEST对象获取非页面内容（后台数据），而JSONP是动态的添加<strong>script</strong>标签来调用服务器提供的js脚本。</li>
+<li>ajax与jsonp的区别不在于是否跨域，ajax通过服务端代理一样可以实现跨域，jsonp本身也不排斥同域的数据的获取</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
@@ -99,9 +137,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/08/02/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/04/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">如何用hexo+github创建博客</div>
     </a>
   
 </nav>
@@ -138,11 +176,11 @@
       <ul>
         
           <li>
-            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonP</a>
+            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
           </li>
         
           <li>
-            <a href="/2017/08/02/我的第一篇博客/">(no title)</a>
+            <a href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a>
           </li>
         
       </ul>

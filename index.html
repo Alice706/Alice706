@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonP</a>
+      <a class="article-title" href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
     </h1>
   
 
@@ -83,7 +83,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2>
+        <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
+<li><strong>目的</strong>:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
+<li><strong>限制</strong><div style="background-color:#eee; padding:10px">    1. cookie、localStorage 和 indexDB无法读取<br>  2. dom 无法获取<br>  3. AJAX 请求不能发送 </div>       </li>
+<li><strong>规定</strong>：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        </li>
+<li><strong>同源</strong>：协议、域名、端口号完全一致</li>
+<li><strong>url的组成</strong>：协议 域名 端口号 路径 参数 哈希值</li>
+<li><strong>同源策略阮一峰的博客有写</strong></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="external">链接到阮一峰的博客</a></li>
+</ul>
+<hr>
+<h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
+<ol>
+<li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
+<li><strong>ajax解决同源策略的方案</strong><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div>
+</li>
+</ol>
+<hr>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
+<li>JSON是一种轻量级的数据交换格式，用于在浏览器和服务器之间交换信息，本质是字符串</li>
+<li>JSON和JS对象互转<br>对象转换成JSON字符串：var json=JSON.stringify();<br>JSON转换成对象：var obj=JSON.parse();</li>
+</ul>
+<hr>
+<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><ol>
+<li>与jsonp息息相关的是script标签，而xhr即ajax与之没有半毛钱关系</li>
+<li>由于同源策略的限制，XmlHttpRequest（浏览器的内置对象，用来与后台交互信息）只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求，这就是jsonp的核心。</li>
+<li><strong>jsonp是非官方跨域数据交互协议</strong></li>
+<li><strong>可以跨域的标签</strong>：在浏览器中，对于标签 script、img、iframe、link 等标签都可以跨域加载资源，而不受同源策略的限制。这些带有“src”属性的标签每次加载的时候，实际上是由浏览器发起一个get请求</li>
+</ol>
+<hr>
+<h2 id="json和jsonp的比较"><a href="#json和jsonp的比较" class="headerlink" title="json和jsonp的比较"></a>json和jsonp的比较</h2><ul>
+<li>JSON是一种数据格式，JSONP是一种数据调用方式</li>
+<li>json是理想的数据交换格式，但没办法跨域直接获取，于是就将json包裹(padding)在一个合法的js语句中作为js文件传过去。这就是json和jsonp的区别，json是想要的东西，jsonp是达到这个目的而普遍采用的一种方法，当然最终获得和处理的还是json。所以说json是目的，jsonp只是手段。json总会用到，而jsonp只有在跨域获取数据才会用到。<h2 id="ajax和jsonp的对比"><a href="#ajax和jsonp的对比" class="headerlink" title="ajax和jsonp的对比"></a>ajax和jsonp的对比</h2></li>
+</ul>
+<ol>
+<li>相同点：都是请求一个url</li>
+<li>不同点：AJAX是通过XMLHTTPREQUEST对象获取非页面内容（后台数据），而JSONP是动态的添加<strong>script</strong>标签来调用服务器提供的js脚本。</li>
+<li>ajax与jsonp的区别不在于是否跨域，ajax通过服务端代理一样可以实现跨域，jsonp本身也不排斥同域的数据的获取</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
@@ -99,17 +137,27 @@
   
     <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/08/02/我的第一篇博客/" class="article-date">
-  <time datetime="2017-08-02T07:46:43.470Z" itemprop="datePublished">2017-08-02</time>
+    <a href="/2017/08/04/我的第一篇博客/" class="article-date">
+  <time datetime="2017-08-04T10:54:52.000Z" itemprop="datePublished">2017-08-04</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="通过github加hexo搭建个人博客的方法"><a href="#通过github加hexo搭建个人博客的方法" class="headerlink" title="通过github加hexo搭建个人博客的方法"></a>通过github加hexo搭建个人博客的方法</h1><h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
+        <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
 
 <h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
 
@@ -141,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/02/我的第一篇博客/" data-id="cj5xs201k0001t8l154yix1vg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/我的第一篇博客/" data-id="cj5xs201k0001t8l154yix1vg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,11 +229,11 @@
       <ul>
         
           <li>
-            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonP</a>
+            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
           </li>
         
           <li>
-            <a href="/2017/08/02/我的第一篇博客/">(no title)</a>
+            <a href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a>
           </li>
         
       </ul>
