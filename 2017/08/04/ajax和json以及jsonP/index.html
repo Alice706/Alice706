@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/04/ajax和json以及jsonP/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
-<meta property="og:updated_time" content="2017-08-04T14:41:45.014Z">
+<meta property="og:updated_time" content="2017-08-05T13:22:48.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax和json以及jsonp">
 <meta name="twitter:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
@@ -98,8 +98,7 @@
 <h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
 <ol>
 <li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
-<li><strong>ajax解决同源策略的方案</strong><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div>
-</li>
+<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h3 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h3><h3 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h3></li>
 </ol>
 <hr>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
@@ -127,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj5xs20030000t8l1s4nk4e7t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj5z8v0820001s4l1olbbuv10" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,6 +134,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/08/05/AMD和CMD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          require.js
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/04/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
@@ -174,6 +182,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/05/AMD和CMD/">require.js</a>
+          </li>
         
           <li>
             <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>

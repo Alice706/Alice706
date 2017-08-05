@@ -61,6 +61,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-AMD和CMD" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/05/AMD和CMD/" class="article-date">
+  <time datetime="2017-08-05T11:56:54.000Z" itemprop="datePublished">2017-08-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/05/AMD和CMD/">require.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h2><ul>
+<li>将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理<h2 id="AMD异步模块定义（Asynchronous-Module-Definition）"><a href="#AMD异步模块定义（Asynchronous-Module-Definition）" class="headerlink" title="AMD异步模块定义（Asynchronous Module Definition）"></a>AMD异步模块定义（Asynchronous Module Definition）</h2></li>
+<li><strong>AMD是如何出生的</strong><br>  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了    </li>
+<li>模块：就是实现一组特定功能的方法</li>
+<li>异步的方式加载模块，不会影响后面的语句运行，所有依赖这个模块的语句，都定义在一个回调函数中，等加载完成以后，这个回调函数才会运行</li>
+<li>AMD是提前执行</li>
+</ul>
+<hr>
+<h2 id="require-js"><a href="#require-js" class="headerlink" title="require.js"></a>require.js</h2><ul>
+<li>为什么会出现：1：管理模块之间的依赖性，便于代码的编写和维护，复用性<br>2：实现js文件的异步加载，避免网页失去响应</li>
+<li>遵循的标准：AMD</li>
+<li>建议：<br>  如果是开发的网站含有大量的js代码，并且大多数是自己编写的js，或者开发webapp，游戏，那么推荐用requirejs；如果开发的网站含有大量第三方插件，建议放弃requirejs</li>
+<li>概念：requirejs是一个js模块的加载器，可以提高js的加载速度，避免不必要的阻塞</li>
+<li>原理：1、把所有js文件交给requirejs来管理，页面中只有一个js文件，让data-mian指向main.js文件</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/05/AMD和CMD/" data-id="cj5z8v07n0000s4l1yc6nvpw1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ajax和json以及jsonP" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/04/ajax和json以及jsonP/" class="article-date">
@@ -96,8 +147,7 @@
 <h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
 <ol>
 <li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
-<li><strong>ajax解决同源策略的方案</strong><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div>
-</li>
+<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h3 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h3><h3 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h3></li>
 </ol>
 <hr>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
@@ -125,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj5xs20030000t8l1s4nk4e7t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj5z8v0820001s4l1olbbuv10" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/我的第一篇博客/" data-id="cj5xs201k0001t8l154yix1vg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/我的第一篇博客/" data-id="cj5z8v08i0002s4l1k3le4yzr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -227,6 +277,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/05/AMD和CMD/">require.js</a>
+          </li>
         
           <li>
             <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
