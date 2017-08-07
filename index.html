@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,63 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-gulp和git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/gulp和git/" class="article-date">
+  <time datetime="2017-08-07T11:12:51.000Z" itemprop="datePublished">2017-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/gulp和git/">gulp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><ul>
+<li>是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs</li>
+<li>能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</li>
+</ul>
+</li>
+<li>前端构建工具都具有的功能：文件的<strong>压缩、合并</strong><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2></li>
+</ol>
+<ul>
+<li>全局安装 gulp，具体方法可以去gulp官网跟着后面输入命令行就行了</li>
+<li>在项目的根目录创建gulpfile.js文件<br>写需要引用的插件：<div style="background-color:#eee;padding:10px;">    var gulp     = require(‘gulp’),<br>  concat   = require(‘gulp-concat’),//- 多个文件合并为一个；<br>  cleanCSS = require(‘gulp-clean-css’),//- 压缩CSS为一行；<br>  ugLify   = require(‘gulp-uglify’),//压缩js<br>  imageMin = require(‘gulp-imagemin’),//压缩图片<br>  pngquant = require(‘imagemin-pngquant’), // 深度压缩<br>  htmlMin  = require(‘gulp-htmlmin’),//压缩html<br>  changed  = require(‘gulp-changed’),//检查改变状态<br>  less     = require(‘gulp-less’)//压缩合并less<br>  del      = require(‘del’)<br>  browserSync = require(“browser-sync”).create();//浏览器实时刷新 </div> 
+
+
+</li>
+</ul>
+<ul>
+<li>gulp的常用插件安装：<div style="background-color:#eee;padding:10px">在根目录npm install gulp gulp-concat gulp-clean-css gulp-uglify gulp-imagemin imagemin-pngquant gulp-htmlmin gulp-changed gulp-less del browser-sync –save-dev。<br></div>
+
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/beverley__/article/details/55213235" target="_blank" rel="external">详细介绍用法的博客地址</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/07/gulp和git/" data-id="cj62303d700009kl13z834bv3" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-AMD和CMD" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -102,7 +159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/05/AMD和CMD/" data-id="cj5z8v07n0000s4l1yc6nvpw1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/05/AMD和CMD/" data-id="cj62303dm00019kl1qxasi863" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -147,7 +204,7 @@
 <h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
 <ol>
 <li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
-<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h3 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h3><h3 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h3></li>
+<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h5 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h5><h5 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h5></li>
 </ol>
 <hr>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
@@ -175,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj5z8v0820001s4l1olbbuv10" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj62303ex00029kl1brfnpqgu" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -239,7 +296,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/我的第一篇博客/" data-id="cj5z8v08i0002s4l1k3le4yzr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/04/我的第一篇博客/" data-id="cj62303ex00039kl1dw075eq0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -274,9 +331,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/07/gulp和git/">gulp</a>
+          </li>
         
           <li>
             <a href="/2017/08/05/AMD和CMD/">require.js</a>
@@ -303,7 +364,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
