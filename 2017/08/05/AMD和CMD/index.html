@@ -1,91 +1,84 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <title>require.js | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>require.js | your are the best</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="shc">
+  
+  
+    <meta name="description" content="前端模块化
+将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理AMD异步模块定义（Asynchronous Module Definition）
+AMD是如何出生的  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了    
+模块：就是实现一组特定功能的方法
+异步的方式加载">
+  
   <meta name="description" content="前端模块化 将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理AMD异步模块定义（Asynchronous Module Definition） AMD是如何出生的  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了     模块：就是实现一组特定功能的方法 异步的方式加载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="require.js">
 <meta property="og:url" content="http://yoursite.com/2017/08/05/AMD和CMD/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="your are the best">
 <meta property="og:description" content="前端模块化 将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理AMD异步模块定义（Asynchronous Module Definition） AMD是如何出生的  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了     模块：就是实现一组特定功能的方法 异步的方式加载">
 <meta property="og:updated_time" content="2017-08-05T13:18:10.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="require.js">
 <meta name="twitter:description" content="前端模块化 将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理AMD异步模块定义（Asynchronous Module Definition） AMD是如何出生的  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了     模块：就是实现一组特定功能的方法 异步的方式加载">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="your are the best" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">your are the best</a></h1>
+    <p><a href="/"></a></p>
   </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-AMD和CMD" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/05/AMD和CMD/" class="article-date">
-  <time datetime="2017-08-05T11:56:54.000Z" itemprop="datePublished">2017-08-05</time>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/05/AMD和CMD/">
+  <time datetime="2017-08-05T11:56:54.000Z">
+    2017-08-05
+  </time>
 </a>
     
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      require.js
-    </h1>
+    <h1 class="title">require.js</h1>
   
 
-      </header>
+  </header>
+  
+  <div class="entry">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h2><ul>
+      <h2 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h2><ul>
 <li>将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理<h2 id="AMD异步模块定义（Asynchronous-Module-Definition）"><a href="#AMD异步模块定义（Asynchronous-Module-Definition）" class="headerlink" title="AMD异步模块定义（Asynchronous Module Definition）"></a>AMD异步模块定义（Asynchronous Module Definition）</h2></li>
 <li><strong>AMD是如何出生的</strong><br>  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了    </li>
 <li>模块：就是实现一组特定功能的方法</li>
@@ -101,118 +94,45 @@
 <li>原理：1、把所有js文件交给requirejs来管理，页面中只有一个js文件，让data-mian指向main.js文件</li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/05/AMD和CMD/" data-id="cj62303dm00019kl1qxasi863" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
     
-<nav id="article-nav">
-  
-    <a href="/2017/08/07/gulp和git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          gulp
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/08/04/ajax和json以及jsonP/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">ajax和json以及jsonp</div>
-    </a>
-  
-</nav>
-
-  
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
-    </div>
+</div>
   </div>
-
-
+  <footer id="footer"><div class="copyright">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/08/07/gulp和git/">gulp</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/05/AMD和CMD/">require.js</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
+  &copy; 2017 <a href="/">shc</a>
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
 
-  </div>
 </body>
 </html>

@@ -1,91 +1,85 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <title>ajax和json以及jsonp | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>ajax和json以及jsonp | your are the best</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="shc">
+  
+  
+    <meta name="description" content="同源策略
+目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。
+限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送        
+规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        
+同源：协议、域名、端口号完全一致
+url的组成：协议 域名 端口号 路径">
+  
   <meta name="description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax和json以及jsonp">
 <meta property="og:url" content="http://yoursite.com/2017/08/04/ajax和json以及jsonP/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="your are the best">
 <meta property="og:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
 <meta property="og:updated_time" content="2017-08-05T13:23:40.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax和json以及jsonp">
 <meta name="twitter:description" content="同源策略 目的:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 限制    1. cookie、localStorage 和 indexDB无法读取  2. dom 无法获取  3. AJAX 请求不能发送         规定：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源         同源：协议、域名、端口号完全一致 url的组成：协议 域名 端口号 路径">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="your are the best" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">your are the best</a></h1>
+    <p><a href="/"></a></p>
   </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-ajax和json以及jsonP" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/04/ajax和json以及jsonP/" class="article-date">
-  <time datetime="2017-08-04T10:54:52.000Z" itemprop="datePublished">2017-08-04</time>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/04/ajax和json以及jsonP/">
+  <time datetime="2017-08-04T10:54:52.000Z">
+    2017-08-04
+  </time>
 </a>
     
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      ajax和json以及jsonp
-    </h1>
+    <h1 class="title">ajax和json以及jsonp</h1>
   
 
-      </header>
+  </header>
+  
+  <div class="entry">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
+      <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
 <li><strong>目的</strong>:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
 <li><strong>限制</strong><div style="background-color:#eee; padding:10px">    1. cookie、localStorage 和 indexDB无法读取<br>  2. dom 无法获取<br>  3. AJAX 请求不能发送 </div>       </li>
 <li><strong>规定</strong>：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        </li>
@@ -123,118 +117,45 @@
 <li>ajax与jsonp的区别不在于是否跨域，ajax通过服务端代理一样可以实现跨域，jsonp本身也不排斥同域的数据的获取</li>
 </ol>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/04/ajax和json以及jsonP/" data-id="cj62303ex00029kl1brfnpqgu" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
     
-<nav id="article-nav">
-  
-    <a href="/2017/08/05/AMD和CMD/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          require.js
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/08/04/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">如何用hexo+github创建博客</div>
-    </a>
-  
-</nav>
-
-  
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
-    </div>
+</div>
   </div>
-
-
+  <footer id="footer"><div class="copyright">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/08/07/gulp和git/">gulp</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/05/AMD和CMD/">require.js</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
+  &copy; 2017 <a href="/">shc</a>
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
 
-  </div>
 </body>
 </html>
