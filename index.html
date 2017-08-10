@@ -59,6 +59,179 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2017/08/10/一些小的知识点/">
+  <time datetime="2017-08-10T11:54:37.000Z">
+    2017-08-10
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/10/一些小的知识点/">一些小的知识点</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <ul>
+<li><strong>link和@import的区别</strong></li>
+</ul>
+<ol>
+<li>link属于html标签，而@import是css提供的。</li>
+<li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
+<li>link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
+<li>link方式样式的权重高于@import的。</li>
+</ol>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/09/cookie和session/">
+  <time datetime="2017-08-09T08:34:19.000Z">
+    2017-08-09
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/09/cookie和session/">cookie和session</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>为什么会出现cookie和session</strong></p>
+<ul>
+<li>由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session(比如：购物车)</li>
+<li>HTTP协议是无状态的协议，一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话</li>
+</ul>
+<ol>
+<li><strong>cookie机制和session机制的区别</strong></li>
+</ol>
+<ul>
+<li>cookie是存储在客户端，session机制采用的是在服务端保持状态的方案</li>
+<li><p>session 的运行依赖 session id，而 session id 是存在 cookie 中的，也就是说，如果浏览器禁用了 cookie ，同时 session 也会失效（但是可以通过其它方式实现，比如在 url 中传递 session_id）</p>
+</li>
+<li><p>由于在服务端保持状态的方案在客户端也需要保持一个标识，所以session机制可能需要借助cookie机制达到保存标识的目的</p>
+</li>
+</ul>
+<ol>
+<li><strong>过期时间</strong></li>
+</ol>
+<ul>
+<li>（会话cookie）cookie默认生命周期为浏览器关闭，cookie消失，保存在内存中</li>
+<li>（持久cookie）设置了周期，会被保存到硬盘上</li>
+</ul>
+<hr>
+<p><a href="http://www.blogjava.net/cheneyfree/archive/2007/05/26/120168.html" target="_blank" rel="external">详细解释的网址</a><br><a href="http://blog.csdn.net/bigpudding24/article/details/51156146" target="_blank" rel="external">一篇好的博客</a></p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/09/流式布局，响应式布局和rem/">
+  <time datetime="2017-08-09T08:24:43.000Z">
+    2017-08-09
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/09/流式布局，响应式布局和rem/">流式布局，响应式布局，弹性布局和rem</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>响应式布局</strong></p>
+<ul>
+<li>检测设备，根据不同的设备采用不同的css，响应式的模板在不同的设备上看上去是不一样的</li>
+<li>是流式布局与自适应布局设计理念的融合</li>
+<li>响应式布局可以根据屏幕的大小自动的调整页面的展现方式，以及布局</li>
+<li>缺点：只能适应主流的宽高</li>
+<li>响应式布局一般配合媒体查询，视口一起使用，来开发一个：能兼容多个终端，而不必多次开发</li>
+</ul>
+<hr>
+<p><strong>流式布局（百分比布局）</strong></p>
+<ul>
+<li>特点：高度按照px，宽度是百分比</li>
+<li>展示的方式像流水一样，一部分一部分的加载</li>
+<li>缺点：能适应各种屏幕，但是显示效果差，往往只能适应几个手机屏幕</li>
+<li>流式布局一般偏向于文字展示的页面，对整个页面比例要求不那么高的。</li>
+</ul>
+<hr>
+<p><strong>伸缩布局</strong></p>
+<ul>
+<li>该元素内部的子元素的float,clear,vertical-align属性统统失效</li>
+</ul>
+<p><strong>rem</strong></p>
+<ul>
+<li>是指相对于根元素的字体大小的单位，是一个相对单位</li>
+<li>一般用于web app开发</li>
+<li>rem能等比例适配所有的屏幕</li>
+<li>rem就是偏向于图片较多，不出现滚动条的满屏页面，且高度还原设计图比例的情况</li>
+<li>两种写法</li>
+</ul>
+<ol>
+<li><div style="background-color:#eee;padding:10px;"><br> html {<br> font-size : 20px;<br>}<br>@media only screen and (min-width: 401px){<br> html {<br>     font-size: 25px !important;<br> }<br>}<br>@media only screen and (min-width: 428px){<br> html {<br>     font-size: 26.75px !important;<br> }<br>}<br></div>
+
+</li>
+</ol>
+<p><strong>总结</strong><br>1.如果只做pc端</p>
+<p>那么定宽度是最好的选择</p>
+<p>2.如果做移动端，且设计对高度要求不高</p>
+<p>那么rem+js是最好的选择，一份css+一份js调节font-size搞定</p>
+<p>3.如果pc，移动要兼容，而且要求很高</p>
+<p>那么响应式布局还是最好的选择，前提是设计根据不同的高宽做不同的设计，</p>
+<p>响应式根据媒体查询做不同的布局。</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2017/08/09/jQuery/">
   <time datetime="2017-08-09T02:32:36.000Z">
     2017-08-09
