@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>gulp和webpack | your are the best</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="shc">
+  
+  
+    <meta name="description" content="gulp
+
+
+是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs
+能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤
+
+
+前端构建工具都具有的功能：文件的压缩、合并如何使用
+
+
+全局安装 gulp，具体方法可以去gulp官网跟着后面">
+  
+  <meta name="description" content="gulp   是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs 能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤   前端构建工具都具有的功能：文件的压缩、合并如何使用   全局安装 gulp，具体方法可以去gulp官网跟着后面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gulp和webpack">
+<meta property="og:url" content="http://yoursite.com/2017/08/07/gulp/index.html">
+<meta property="og:site_name" content="your are the best">
+<meta property="og:description" content="gulp   是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs 能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤   前端构建工具都具有的功能：文件的压缩、合并如何使用   全局安装 gulp，具体方法可以去gulp官网跟着后面">
+<meta property="og:updated_time" content="2017-08-10T14:45:34.090Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gulp和webpack">
+<meta name="twitter:description" content="gulp   是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs 能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤   前端构建工具都具有的功能：文件的压缩、合并如何使用   全局安装 gulp，具体方法可以去gulp官网跟着后面">
+  
+    <link rel="alternate" href="/atom.xml" title="your are the best" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">your are the best</a></h1>
+    <p><a href="/"></a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/07/gulp/">
+  <time datetime="2017-08-07T11:12:51.000Z">
+    2017-08-07
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">gulp和webpack</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>gulp</strong></p>
+<ol>
+<li><ul>
+<li>是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs</li>
+<li>能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</li>
+</ul>
+</li>
+<li>前端构建工具都具有的功能：文件的<strong>压缩、合并</strong><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2></li>
+</ol>
+<ul>
+<li>全局安装 gulp，具体方法可以去gulp官网跟着后面输入命令行就行了</li>
+<li>在项目的根目录创建gulpfile.js文件<br>写需要引用的插件：<div style="background-color:#eee;padding:10px;">    var gulp     = require(‘gulp’),<br>  concat   = require(‘gulp-concat’),//- 多个文件合并为一个；<br>  cleanCSS = require(‘gulp-clean-css’),//- 压缩CSS为一行；<br>  ugLify   = require(‘gulp-uglify’),//压缩js<br>  imageMin = require(‘gulp-imagemin’),//压缩图片<br>  pngquant = require(‘imagemin-pngquant’), // 深度压缩<br>  htmlMin  = require(‘gulp-htmlmin’),//压缩html<br>  changed  = require(‘gulp-changed’),//检查改变状态<br>  less     = require(‘gulp-less’)//压缩合并less<br>  del      = require(‘del’)<br>  browserSync = require(“browser-sync”).create();//浏览器实时刷新 </div> 
+
+
+</li>
+</ul>
+<ul>
+<li>gulp的常用插件安装：<div style="background-color:#eee;padding:10px">在根目录npm install gulp gulp-concat gulp-clean-css gulp-uglify gulp-imagemin imagemin-pngquant gulp-htmlmin gulp-changed gulp-less del browser-sync –save-dev。<br></div>
+
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/beverley__/article/details/55213235" target="_blank" rel="external">详细介绍用法的博客地址</a></p>
+<hr>
+<p><strong>webpack</strong></p>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2017 <a href="/">shc</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
