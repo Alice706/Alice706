@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <title>your are the best</title>
+  <title>try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
     <meta name="author" content="shc">
   
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="your are the best">
+<meta property="og:title" content="try you best">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="your are the best">
+<meta property="og:site_name" content="try you best">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="your are the best">
+<meta name="twitter:title" content="try you best">
   
-    <link rel="alternate" href="/atom.xml" title="your are the best" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="try you best" type="application/atom+xml">
   
   
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -31,7 +31,7 @@
   <div class="wrapper">
     <header id="header">
   <div class="title">
-    <h1><a href="/">your are the best</a></h1>
+    <h1><a href="/">try you best</a></h1>
     <p><a href="/"></a></p>
   </div>
   <nav class="nav">
@@ -52,6 +52,215 @@
     <div class="content">
 
 
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/11/作用域、沙箱、闭包/">
+  <time datetime="2017-08-11T13:45:45.000Z">
+    2017-08-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/11/作用域、沙箱、闭包/">作用域、沙箱、闭包</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>作用域</strong></p>
+<ul>
+<li>变量起作用的区域</li>
+<li>作用域链：在一个函数内部嵌套另外一个函数<br>注：不管在哪里调用，只管在哪里创建</li>
+</ul>
+<hr>
+<p><strong>闭包</strong></p>
+<ul>
+<li>定义：在函数内部定义的变量，在函数外部无法访问</li>
+</ul>
+<ol>
+<li>js中所有的函数都能形成闭包</li>
+<li>函数里面包裹其他函数，并且返回这个函数<br><div style="background-color:#eee;padding:10px"><br> function fn () {<br> var num = 123;<br> return function () {</div></li>
+</ol>
+<p>}<br>}<br>var n = fn();//结果：return 后面的函数体<br>n();<br></p>
+<hr>
+<p><strong>沙箱模式（自调用）</strong><br>作用：用于为一些来源不可信，无法判定意图的程序提供试验环境，对变量进行隔离<br>目的：减少全局污染<br>(function(){</p>
+<p>})()</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/11/函数/">
+  <time datetime="2017-08-11T13:16:06.000Z">
+    2017-08-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/11/函数/">函数</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>创建函数的几种方式</strong></p>
+<ol>
+<li>字面量<ul>
+<li>function fn () { }</li>
+</ul>
+</li>
+<li>函数表达式<ul>
+<li>var fn =function () { }</li>
+</ul>
+</li>
+<li>构造函数<ul>
+<li>var fn = new Function ();</li>
+<li>var fn = new Function(‘hello’);</li>
+</ul>
+</li>
+<li>自定义构造函数<ul>
+<li>function Fn () { }<br>var fn = new Fn();</li>
+</ul>
+<hr>
+<strong>callee和caller</strong><ul>
+<li>callee:argument对象所在的函数<br>作用：在函数内部指向函数自身<br>function fn (1,2,3) {<br>arguments.callee;//结果：这个函数体<br>arguments.callee();//递归<br>}  </li>
+<li>caller呼叫者<br>作用：显示该函数的调用者<br>如果fn()在全局调用，返回结果为<strong>null</strong><br>function fn (a,b) {<br>console.log(fn.caller);<br>}<br>function fn1 ( ) {<br>fn();<br>}</li>
+</ul>
+</li>
+</ol>
+<p>返回：function fn1 () {<br>    fn();<br>}</p>
+<hr>
+<p><strong>函数的四种调用模式</strong></p>
+<ol>
+<li>函数调用模式</li>
+<li>方法调用模式</li>
+<li>构造函数调用模式</li>
+<li>上下文调用模式（借用）apply()/call()</li>
+</ol>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/08/11/对象/">
+  <time datetime="2017-08-11T11:27:53.000Z">
+    2017-08-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/08/11/对象/">对象、面向对象、原型</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong><h2>对象</h2></strong></p>
+<ul>
+<li>无序的键值对的集合</li>
+<li><p>创建对象的方式</p>
+<ol>
+<li>字面量：var obj = { } //缺点：大量使用时，代码的复用性太低</li>
+<li>构造函数：var obj = new Object();//代码复用性更低</li>
+<li>自定义构造函数：function Obj() { } var obj1 = new Obj();var obj2 = new Obj();<ul>
+<li>执行过程：  </li>
+</ul>
+<ol>
+<li>创建一个对象  </li>
+<li>让this 指向这个对象  </li>
+<li>执行构造函数  </li>
+<li>返回这个对象</li>
+</ol>
+</li>
+<li>实例：对象，实例化：创建对象的过程</li>
+<li>静态方法和实例方法</li>
+</ol>
+<ul>
+<li><p>静态方法：函数名.方法名</p>
+</li>
+<li><p>实例方法：对象名.方法名</p>
+</li>
+<li>如何给对象添加属性和方法<ol>
+<li>添加到原型上</li>
+<li>让原型指向这个对象</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>注：对象的返回值是引用类型时，返回的结果就是引用类型</p>
+</li>
+</ul>
+<hr>
+<p><strong>原型</strong></p>
+<ul>
+<li>概念：每个构造函数在创建出来的时候，系统会自动给这个构造函数创建并关联一个空对象，这个对象就是原型</li>
+<li>在原型中定义的方法和属性，会被这个构造函数创建出来的对象共享</li>
+</ul>
+<p><strong><h2>面向对象</h2></strong></p>
+<ul>
+<li>面向对象就是面向过程的封装</li>
+<li>面向对象是一种编程思想</li>
+<li>原型链：对象有原型，原型本身又是一个对象，所以原型也有原型</li>
+<li>三大特性<ul>
+<li>封装（可拓展性）对象对属性和方法的封装</li>
+<li>继承 （重用性）一个对象想拥有另外一个对象的属性和方法</li>
+<li>多态（可维护，可拓展）在Js中没有多态</li>
+</ul>
+<hr>
+<strong><h2>经典继承</h2></strong></li>
+</ul>
+<ol>
+<li>简单混入  for … in(缺点：复用性低)<div style="background-color:#eee;padding:10px;margin:10px;"> var obj = {<br>name : ‘nacy’;<br>}<br>var obj1 = {};<br>for (var k in obj){<br>obj1[k] = obj[k]<br>}<br></div><br>2. 原型混入<br>- for … in 添加到原型中<br>- 替换原型<br><div style="background-color:#eee;padding:10px;margin:10px"><br>var obj = {<br>name : “nacy”<br>}<br>function Person () {}<br>var person = new Person();<br>p.prototype = obj;<br></div><br>3. Object.create()<br><div style="background-color:#eee;padding:10px;margin:10px"><br> var obj = {<br> name:’nacy’<br>}<br>var obj1 = Object.create(obj);//好用，es6的新语法，有兼容性<br></div>
+</li>
+</ol>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
 
 
   
@@ -126,8 +335,20 @@
 <li>link属于html标签，而@import是css提供的。</li>
 <li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
 <li>link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
-<li>link方式样式的权重高于@import的。</li>
+<li>link方式样式的权重高于@import的。<br><strong>CDN内容分布网络</strong></li>
 </ol>
+<ul>
+<li>避开网络上有可能影响数据传输速度和稳定性的瓶颈和环节<br><strong>return false</strong></li>
+<li>jQuery中，既能阻止事件冒泡，也能阻止默认事件</li>
+<li>js中，只能阻止默认事件<br><strong>less</strong></li>
+<li>l. ess是css预处理器，1添加了一些编程的特性</li>
+<li><ol>
+<li>让css代码更简洁，3代码更直观，便于后期维护，减少无意义的机械劳动<br><strong>eval</strong></li>
+</ol>
+</li>
+<li>把字符串的内容作为js的代码执行</li>
+<li>和Function的区别：Function()中的方法体是字符串，必须调用才能执行</li>
+</ul>
 
     
   </div>
@@ -409,188 +630,11 @@
 
 
   
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/05/AMD和CMD/">
-  <time datetime="2017-08-05T11:56:54.000Z">
-    2017-08-05
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/05/AMD和CMD/">require.js</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h2><ul>
-<li>将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理<h2 id="AMD异步模块定义（Asynchronous-Module-Definition）"><a href="#AMD异步模块定义（Asynchronous-Module-Definition）" class="headerlink" title="AMD异步模块定义（Asynchronous Module Definition）"></a>AMD异步模块定义（Asynchronous Module Definition）</h2></li>
-<li><strong>AMD是如何出生的</strong><br>  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了    </li>
-<li>模块：就是实现一组特定功能的方法</li>
-<li>异步的方式加载模块，不会影响后面的语句运行，所有依赖这个模块的语句，都定义在一个回调函数中，等加载完成以后，这个回调函数才会运行</li>
-<li>AMD是提前执行</li>
-</ul>
-<hr>
-<h2 id="require-js"><a href="#require-js" class="headerlink" title="require.js"></a>require.js</h2><ul>
-<li>为什么会出现：1：管理模块之间的依赖性，便于代码的编写和维护，复用性<br>2：实现js文件的异步加载，避免网页失去响应</li>
-<li>遵循的标准：AMD</li>
-<li>建议：<br>  如果是开发的网站含有大量的js代码，并且大多数是自己编写的js，或者开发webapp，游戏，那么推荐用requirejs；如果开发的网站含有大量第三方插件，建议放弃requirejs</li>
-<li>概念：requirejs是一个js模块的加载器，可以提高js的加载速度，避免不必要的阻塞</li>
-<li>原理：1、把所有js文件交给requirejs来管理，页面中只有一个js文件，让data-mian指向main.js文件</li>
-</ul>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/04/ajax和json以及jsonP/">
-  <time datetime="2017-08-04T10:54:52.000Z">
-    2017-08-04
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
-<li><strong>目的</strong>:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
-<li><strong>限制</strong><div style="background-color:#eee; padding:10px">    1. cookie、localStorage 和 indexDB无法读取<br>  2. dom 无法获取<br>  3. AJAX 请求不能发送 </div>       </li>
-<li><strong>规定</strong>：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        </li>
-<li><strong>同源</strong>：协议、域名、端口号完全一致</li>
-<li><strong>url的组成</strong>：协议 域名 端口号 路径 参数 哈希值</li>
-<li><strong>同源策略阮一峰的博客有写</strong></li>
-<li><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="external">链接到阮一峰的博客</a></li>
-</ul>
-<hr>
-<h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
-<ol>
-<li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
-<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h5 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h5><h5 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h5></li>
-</ol>
-<hr>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
-<li>JSON是一种轻量级的数据交换格式，用于在浏览器和服务器之间交换信息，本质是字符串</li>
-<li>JSON和JS对象互转<br>对象转换成JSON字符串：var json=JSON.stringify();<br>JSON转换成对象：var obj=JSON.parse();</li>
-</ul>
-<hr>
-<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><ol>
-<li>与jsonp息息相关的是script标签，而xhr即ajax与之没有半毛钱关系</li>
-<li>由于同源策略的限制，XmlHttpRequest（浏览器的内置对象，用来与后台交互信息）只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求，这就是jsonp的核心。</li>
-<li><strong>jsonp是非官方跨域数据交互协议</strong></li>
-<li><strong>可以跨域的标签</strong>：在浏览器中，对于标签 script、img、iframe、link 等标签都可以跨域加载资源，而不受同源策略的限制。这些带有“src”属性的标签每次加载的时候，实际上是由浏览器发起一个get请求</li>
-</ol>
-<hr>
-<h2 id="json和jsonp的比较"><a href="#json和jsonp的比较" class="headerlink" title="json和jsonp的比较"></a>json和jsonp的比较</h2><ul>
-<li>JSON是一种数据格式，JSONP是一种数据调用方式</li>
-<li>json是理想的数据交换格式，但没办法跨域直接获取，于是就将json包裹(padding)在一个合法的js语句中作为js文件传过去。这就是json和jsonp的区别，json是想要的东西，jsonp是达到这个目的而普遍采用的一种方法，当然最终获得和处理的还是json。所以说json是目的，jsonp只是手段。json总会用到，而jsonp只有在跨域获取数据才会用到。<h2 id="ajax和jsonp的对比"><a href="#ajax和jsonp的对比" class="headerlink" title="ajax和jsonp的对比"></a>ajax和jsonp的对比</h2></li>
-</ul>
-<ol>
-<li>相同点：都是请求一个url</li>
-<li>不同点：AJAX是通过XMLHTTPREQUEST对象获取非页面内容（后台数据），而JSONP是动态的添加<strong>script</strong>标签来调用服务器提供的js脚本。</li>
-<li>ajax与jsonp的区别不在于是否跨域，ajax通过服务端代理一样可以实现跨域，jsonp本身也不排斥同域的数据的获取</li>
-</ol>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/04/我的第一篇博客/">
-  <time datetime="2017-08-04T10:54:52.000Z">
-    2017-08-04
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/04/我的第一篇博客/">如何用hexo+github创建博客</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
-
-<h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
-
-<h3 id="4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><a href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server" class="headerlink" title="4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server"></a>4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</h3><div style="background-color:#eee;padding:10px;">提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>这个时候博客就搭建完成了，就这么几个步骤，我竟然花了一整天的时间才研究一个入门，泪奔不过总归是完成了，还是很有成就感的，撒花</div>
-
-<h2 id="二：markdown的使用中遇到的问题"><a href="#二：markdown的使用中遇到的问题" class="headerlink" title="二：markdown的使用中遇到的问题"></a>二：markdown的使用中遇到的问题</h2><h3 id="1-源文件的位置"><a href="#1-源文件的位置" class="headerlink" title="1.源文件的位置"></a>1.源文件的位置</h3><div style="background-color:#eee;padding:10px;">源文件在本地的<em>/sources/_posts/</em>.md中,找到这个文件，就可以在里面通过markdown语法来写博客了</div>
-
-<h3 id="2-如何发布"><a href="#2-如何发布" class="headerlink" title="2.如何发布"></a>2.如何发布</h3><div style="background-color:#eee;padding:10px;">写好博客以后，在git bash中输入命令行：<strong>hexo g</strong>用来生成完成的博客，通过<strong>hexo s</strong>查看页面效果</div>
-
-<h3 id="3-遇到的乱码问题"><a href="#3-遇到的乱码问题" class="headerlink" title="3.遇到的乱码问题"></a>3.遇到的乱码问题</h3><div style="background-color:#eee;padding:10px;">在可以自己写博客时，我的心情是万分激动的，但是当我去页面查看时，发现我写的中文全部都是乱码，<br>乱码，乱码，重要的事情说三遍，起初以为是自己的markdown语法写错了，后来各种百度，各种查找，终于<br>在一篇文章中看到，原来是编码格式的问题，只要：<strong>将博客文件保存为UTF-8用记事本打开本地的博客文件“xxx.md”，然后点“另存为”，“编码(E):”选择“UTF-8”，点击“保存”，替换原文件。</strong><br></div>
-
-<h3 id="4-如何创建一篇新的博客"><a href="#4-如何创建一篇新的博客" class="headerlink" title="4.如何创建一篇新的博客"></a>4.如何创建一篇新的博客</h3><div style="background-color:#eee;padding:10px;">这个只要在命令行输入：<strong>hexo new “博客名称”</strong> 就妥妥的新建了一个新的博客，你可以去源文件的位置去找到这个文件</div>
-
-<h3 id="5-关于markddown语法"><a href="#5-关于markddown语法" class="headerlink" title="5.关于markddown语法"></a>5.关于markddown语法</h3><div style="background-color:#eee;padding:10px;">语法这个东西其实不多，直接百度markdown怎么写，或者去官网看看</div>
-
-<h2 id="三：上传到github上"><a href="#三：上传到github上" class="headerlink" title="三：上传到github上"></a>三：上传到github上</h2><div style="background-color:#eee;padding:10px;">在github上创建一个：<strong>自己的用户名.github.io</strong>的文件<br>在blog（本地创建的目录）下的public下 <strong>git bash here</strong>执行命令:<span style="color:red">git status用来查看状态，git add -A用来保存全部，git commit -m “存档的名字”</span>完成以后最后：<strong>git push 远程仓库的地址 master</strong>这里我用的是SSH的方式，可以免用户名和密码，具体的操作就不说了，想要知道可以百度<br></div><br>## 四：访问自己的博客<br><div style="background-color:#eee;padding:10px;">上传成功以后，在网页输入：<strong>你的用户名.github.io</strong>就可以访问自己的博客了</div>
-
-
-
-
-
-<hr>
-<ol>
-<li><p>用到的网址链接<br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网地址</a><br><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题网址</a></p>
-<hr>
-</li>
-</ol>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
 
   <nav id="pagination">
   
+  
+    <a href="/page/2/" class="next">Next</a>
   
   <div class="clearfix"></div>
 </nav>
