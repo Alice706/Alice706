@@ -27,7 +27,7 @@ link方式样式的权重高于@import的。CDN内容分布网络
 <meta property="og:url" content="http://yoursite.com/2017/08/10/一些小的知识点/index.html">
 <meta property="og:site_name" content="try you best">
 <meta property="og:description" content="link和@import的区别   link属于html标签，而@import是css提供的。 页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。 link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。 link方式样式的权重高于@import的。CDN内容分布网络   避开网络上有可能影响数据传输速度和稳定性的瓶颈和环节retu">
-<meta property="og:updated_time" content="2017-08-11T13:39:54.782Z">
+<meta property="og:updated_time" content="2017-08-13T14:58:39.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些小的知识点">
 <meta name="twitter:description" content="link和@import的区别   link属于html标签，而@import是css提供的。 页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。 link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。 link方式样式的权重高于@import的。CDN内容分布网络   避开网络上有可能影响数据传输速度和稳定性的瓶颈和环节retu">
@@ -102,7 +102,44 @@ link方式样式的权重高于@import的。CDN内容分布网络
 </ol>
 </li>
 <li>把字符串的内容作为js的代码执行</li>
-<li>和Function的区别：Function()中的方法体是字符串，必须调用才能执行</li>
+<li>和Function的区别：Function()中的方法体是字符串，必须调用才能执行<br><strong>html5语义化的理解</strong></li>
+<li>用正确的标签包含正确的内容<br><strong>cookie、sessionStorage、localeStorage的区别</strong></li>
+<li>cookie是存储在浏览器端，并且随浏览器的请求一起发送到服务器端的，它有一定的过期时间，到了过期时间自动会消失。sessionStorage和localeStorage也是存储在客户端的，同属于web Storage，比cookie的存储大小要大有8m，cookie只有4kb，localeStorage是持久化的存储在客户端，如果用户不手动清除的话，不会自动消失，会一直存在，sessionStorage也是存储在客户端，但是它的存活时间是在一个回话期间，只要浏览器的回话关闭了就会自动消失。<br><strong>重构、回流</strong></li>
+<li>浏览器的重构指的是改变每个元素外观时所触发的浏览器行为，比如颜色，背景等样式发生了改变而进行的重新构造新外观的过程。重构不会引发页面的重新布局，不一定伴随着回流，回流指的是浏览器为了重新渲染页面的需要而进行的重新计算元素的几何大小和位置的，他的开销是非常大的，回流可以理解为渲染树需要重新进行计算，一般最好触发元素的重构，避免元素的回流；比如通过通过添加类来添加css样式，而不是直接在DOM上设置，当需要操作某一块元素时候，最好使其脱离文档流，这样就不会引起回流了，比如设置position：absolute或者fixed，或者display：none，等操作结束后在显示。</li>
+</ul>
+<p><strong>内置对象、宿主对象、本地对象</strong>、</p>
+<ul>
+<li>内置对象有些对象有自己的属性和方法，无需实例化，这就是内置对象<ul>
+<li>内置对象： Math Global(isNaN,parseInt(),parseFloat是它的方法)</li>
+</ul>
+</li>
+<li>本地对象必须new实例化才能使用其属性和方法的是本地对象<ul>
+<li>常见本地对象：Object Function Array Boolean Number Date RegExp</li>
+</ul>
+</li>
+<li>宿主对象：window document body</li>
+</ul>
+<p><strong>跨域的几种方式</strong></p>
+<ul>
+<li>jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特性，是一种新协议）跨域、设置代理服务器（由服务器替我们向不同源的服务器请求数据）、CORS（跨源资源共享，cross origin resource sharing）、iframe跨域、postMessage(包含iframe的页面向iframe传递消息)</li>
+</ul>
+<hr>
+<p><strong>http状态码</strong></p>
+<ul>
+<li><p>http状态码是表示服务器对请求的响应状态，主要分为以下几个部分</p>
+<ul>
+<li><p>1**：这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束</p>
+</li>
+<li><p>2**：表示请求成功，</p>
+</li>
+<li><p>3**：表示重定向</p>
+</li>
+<li><p>4**：表示客户端错误</p>
+</li>
+<li><p>5**：表示服务器端错误</p>
+</li>
+</ul>
+</li>
 </ul>
 
     
