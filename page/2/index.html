@@ -59,246 +59,6 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2017/08/07/gulp和webpack/">
-  <time datetime="2017-08-07T11:12:51.454Z">
-    2017-08-07
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/07/gulp和webpack/">gulp和webpack</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p><strong>gulp</strong></p>
-<ol>
-<li><ul>
-<li>是什么：是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，是基于node.js的自动任务运行器，所以要使用Node必须先安装nodejs</li>
-<li>能够自动的完成文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</li>
-</ul>
-</li>
-<li>前端构建工具都具有的功能：文件的<strong>压缩、合并</strong><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2></li>
-</ol>
-<ul>
-<li>全局安装 gulp，具体方法可以去gulp官网跟着后面输入命令行就行了</li>
-<li>在项目的根目录创建gulpfile.js文件<br>写需要引用的插件：<div style="background-color:#eee;padding:10px;">    var gulp     = require(‘gulp’),<br>  concat   = require(‘gulp-concat’),//- 多个文件合并为一个；<br>  cleanCSS = require(‘gulp-clean-css’),//- 压缩CSS为一行；<br>  ugLify   = require(‘gulp-uglify’),//压缩js<br>  imageMin = require(‘gulp-imagemin’),//压缩图片<br>  pngquant = require(‘imagemin-pngquant’), // 深度压缩<br>  htmlMin  = require(‘gulp-htmlmin’),//压缩html<br>  changed  = require(‘gulp-changed’),//检查改变状态<br>  less     = require(‘gulp-less’)//压缩合并less<br>  del      = require(‘del’)<br>  browserSync = require(“browser-sync”).create();//浏览器实时刷新 </div> 
-
-
-</li>
-</ul>
-<ul>
-<li>gulp的常用插件安装：<div style="background-color:#eee;padding:10px">在根目录npm install gulp gulp-concat gulp-clean-css gulp-uglify gulp-imagemin imagemin-pngquant gulp-htmlmin gulp-changed gulp-less del browser-sync –save-dev。<br></div>
-
-</li>
-</ul>
-<p><a href="http://blog.csdn.net/beverley__/article/details/55213235" target="_blank" rel="external">详细介绍用法的博客地址</a></p>
-<hr>
-<p><strong>webpack</strong><br><a href="http://www.jianshu.com/p/42e11515c10f#" target="_blank" rel="external">简单入门</a><br><a href="https://github.com/slashhuang/blog/issues/1" target="_blank" rel="external">github上的相关了解</a><br><a href="http://mlxiao.com/2017/02/08/webpack/" target="_blank" rel="external">好的相关文章链接</a></p>
-<ul>
-<li>，Gulp/Grunt是一种能够优化前端的开发流程的工具，而WebPack是一种模块化的解决方案，不过Webpack的优点使得Webpack在很多场景下可以替代Gulp/Grunt类的工具。</li>
-<li>Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件</li>
-</ul>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/05/AMD和CMD/">
-  <time datetime="2017-08-05T11:56:55.034Z">
-    2017-08-05
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/05/AMD和CMD/">require.js</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h2><ul>
-<li>将指定功能的内容划分成一个个的模块，提高复用性，容易维护和管理<h2 id="AMD异步模块定义（Asynchronous-Module-Definition）"><a href="#AMD异步模块定义（Asynchronous-Module-Definition）" class="headerlink" title="AMD异步模块定义（Asynchronous Module Definition）"></a>AMD异步模块定义（Asynchronous Module Definition）</h2></li>
-<li><strong>AMD是如何出生的</strong><br>  09年由于node.js的诞生，将js语言用于服务端编程，标志了js模块化编程的正式诞生，那么有了服务端的模块，很自然的，大家就想要客户端的模块，于是AMD诞生了    </li>
-<li>模块：就是实现一组特定功能的方法</li>
-<li>异步的方式加载模块，不会影响后面的语句运行，所有依赖这个模块的语句，都定义在一个回调函数中，等加载完成以后，这个回调函数才会运行</li>
-<li>AMD是提前执行</li>
-</ul>
-<hr>
-<h2 id="require-js"><a href="#require-js" class="headerlink" title="require.js"></a>require.js</h2><ul>
-<li>为什么会出现：1：管理模块之间的依赖性，便于代码的编写和维护，复用性<br>2：实现js文件的异步加载，避免网页失去响应</li>
-<li>遵循的标准：AMD</li>
-<li>建议：<br>  如果是开发的网站含有大量的js代码，并且大多数是自己编写的js，或者开发webapp，游戏，那么推荐用requirejs；如果开发的网站含有大量第三方插件，建议放弃requirejs</li>
-<li>概念：requirejs是一个js模块的加载器，可以提高js的加载速度，避免不必要的阻塞</li>
-<li>原理：1、把所有js文件交给requirejs来管理，页面中只有一个js文件，让data-mian指向main.js文件</li>
-</ul>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/04/ajax和json以及jsonP/">
-  <time datetime="2017-08-04T10:54:52.417Z">
-    2017-08-04
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/04/ajax和json以及jsonP/">ajax和json以及jsonp</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><ul>
-<li><strong>目的</strong>:同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
-<li><strong>限制</strong><div style="background-color:#eee; padding:10px">    1. cookie、localStorage 和 indexDB无法读取<br>  2. dom 无法获取<br>  3. AJAX 请求不能发送 </div>       </li>
-<li><strong>规定</strong>：不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源        </li>
-<li><strong>同源</strong>：协议、域名、端口号完全一致</li>
-<li><strong>url的组成</strong>：协议 域名 端口号 路径 参数 哈希值</li>
-<li><strong>同源策略阮一峰的博客有写</strong></li>
-<li><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="external">链接到阮一峰的博客</a></li>
-</ul>
-<hr>
-<h2 id="AJAX-异步-Javascript-和-xml"><a href="#AJAX-异步-Javascript-和-xml" class="headerlink" title="AJAX(异步 Javascript 和 xml)"></a>AJAX(异步 Javascript 和 xml)</h2><h3 id="本质：在http协议的基础上，以异步的方式与服务器进行通信"><a href="#本质：在http协议的基础上，以异步的方式与服务器进行通信" class="headerlink" title="本质：在http协议的基础上，以异步的方式与服务器进行通信"></a>本质：在http协议的基础上，以异步的方式与服务器进行通信</h3><p>XMLHTTPREQUEST通过在后台与服务器进行少量数据交互，实现页面异步更新<br><strong>异步</strong>：某段程序执行时，不会阻塞其他程序的执行</p>
-<ol>
-<li><strong>ajax是以何种格式来交互数据的？跨域的问题如何解决</strong><br>首选方案：json传输数据，jsonp实现跨域</li>
-<li><strong>ajax解决同源策略的方案</strong><br><div style="background-color:#eee;padding:10px">    -JSONP<br> -WebSocket<br> -CORS：跨域资源分享，允许任何类型的请求<br></div><h5 id="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"><a href="#优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验" class="headerlink" title="优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验"></a>优点：异步通信，实现页面局部刷新，按需获取数据，节约宽带资源，带来更好的用户体验</h5><h5 id="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"><a href="#缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备" class="headerlink" title="缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备"></a>缺点：不支持浏览器back按钮，暴露了与服务器交互的细节，对搜索引擎支持比较弱，不能很好的支持移动设备</h5></li>
-</ol>
-<hr>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><ul>
-<li>JSON是一种轻量级的数据交换格式，用于在浏览器和服务器之间交换信息，本质是字符串</li>
-<li>JSON和JS对象互转<br>对象转换成JSON字符串：var json=JSON.stringify();<br>JSON转换成对象：var obj=JSON.parse();</li>
-</ul>
-<hr>
-<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><ol>
-<li>与jsonp息息相关的是script标签，而xhr即ajax与之没有半毛钱关系</li>
-<li>由于同源策略的限制，XmlHttpRequest（浏览器的内置对象，用来与后台交互信息）只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求，这就是jsonp的核心。</li>
-<li><strong>jsonp是非官方跨域数据交互协议</strong></li>
-<li><strong>可以跨域的标签</strong>：在浏览器中，对于标签 script、img、iframe、link 等标签都可以跨域加载资源，而不受同源策略的限制。这些带有“src”属性的标签每次加载的时候，实际上是由浏览器发起一个get请求</li>
-</ol>
-<hr>
-<h2 id="json和jsonp的比较"><a href="#json和jsonp的比较" class="headerlink" title="json和jsonp的比较"></a>json和jsonp的比较</h2><ul>
-<li>JSON是一种数据格式，JSONP是一种数据调用方式</li>
-<li>json是理想的数据交换格式，但没办法跨域直接获取，于是就将json包裹(padding)在一个合法的js语句中作为js文件传过去。这就是json和jsonp的区别，json是想要的东西，jsonp是达到这个目的而普遍采用的一种方法，当然最终获得和处理的还是json。所以说json是目的，jsonp只是手段。json总会用到，而jsonp只有在跨域获取数据才会用到。<h2 id="ajax和jsonp的对比"><a href="#ajax和jsonp的对比" class="headerlink" title="ajax和jsonp的对比"></a>ajax和jsonp的对比</h2></li>
-</ul>
-<ol>
-<li>相同点：都是请求一个url</li>
-<li>不同点：AJAX是通过XMLHTTPREQUEST对象获取非页面内容（后台数据），而JSONP是动态的添加<strong>script</strong>标签来调用服务器提供的js脚本。</li>
-<li>ajax与jsonp的区别不在于是否跨域，ajax通过服务端代理一样可以实现跨域，jsonp本身也不排斥同域的数据的获取</li>
-</ol>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/02/我的第一篇博客/">
-  <time datetime="2017-08-02T07:46:43.470Z">
-    2017-08-02
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/02/我的第一篇博客/">如何用hexo+github创建博客</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
-
-<h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
-
-<h3 id="4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><a href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server" class="headerlink" title="4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server"></a>4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</h3><div style="background-color:#eee;padding:10px;">提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>这个时候博客就搭建完成了，就这么几个步骤，我竟然花了一整天的时间才研究一个入门，泪奔不过总归是完成了，还是很有成就感的，撒花</div>
-
-<h2 id="二：markdown的使用中遇到的问题"><a href="#二：markdown的使用中遇到的问题" class="headerlink" title="二：markdown的使用中遇到的问题"></a>二：markdown的使用中遇到的问题</h2><h3 id="1-源文件的位置"><a href="#1-源文件的位置" class="headerlink" title="1.源文件的位置"></a>1.源文件的位置</h3><div style="background-color:#eee;padding:10px;">源文件在本地的<em>/sources/_posts/</em>.md中,找到这个文件，就可以在里面通过markdown语法来写博客了</div>
-
-<h3 id="2-如何发布"><a href="#2-如何发布" class="headerlink" title="2.如何发布"></a>2.如何发布</h3><div style="background-color:#eee;padding:10px;">写好博客以后，在git bash中输入命令行：<strong>hexo g</strong>用来生成完成的博客，通过<strong>hexo s</strong>查看页面效果</div>
-
-<h3 id="3-遇到的乱码问题"><a href="#3-遇到的乱码问题" class="headerlink" title="3.遇到的乱码问题"></a>3.遇到的乱码问题</h3><div style="background-color:#eee;padding:10px;">在可以自己写博客时，我的心情是万分激动的，但是当我去页面查看时，发现我写的中文全部都是乱码，<br>乱码，乱码，重要的事情说三遍，起初以为是自己的markdown语法写错了，后来各种百度，各种查找，终于<br>在一篇文章中看到，原来是编码格式的问题，只要：<strong>将博客文件保存为UTF-8用记事本打开本地的博客文件“xxx.md”，然后点“另存为”，“编码(E):”选择“UTF-8”，点击“保存”，替换原文件。</strong><br></div>
-
-<h3 id="4-如何创建一篇新的博客"><a href="#4-如何创建一篇新的博客" class="headerlink" title="4.如何创建一篇新的博客"></a>4.如何创建一篇新的博客</h3><div style="background-color:#eee;padding:10px;">这个只要在命令行输入：<strong>hexo new “博客名称”</strong> 就妥妥的新建了一个新的博客，你可以去源文件的位置去找到这个文件</div>
-
-<h3 id="5-关于markddown语法"><a href="#5-关于markddown语法" class="headerlink" title="5.关于markddown语法"></a>5.关于markddown语法</h3><div style="background-color:#eee;padding:10px;">语法这个东西其实不多，直接百度markdown怎么写，或者去官网看看</div>
-
-<h2 id="三：上传到github上"><a href="#三：上传到github上" class="headerlink" title="三：上传到github上"></a>三：上传到github上</h2><div style="background-color:#eee;padding:10px;">在github上创建一个：<strong>自己的用户名.github.io</strong>的文件<br>在blog（本地创建的目录）下的public下 <strong>git bash here</strong>执行命令:<span style="color:red">git status用来查看状态，git add -A用来保存全部，git commit -m “存档的名字”</span>完成以后最后：<strong>git push 远程仓库的地址 master</strong>这里我用的是SSH的方式，可以免用户名和密码，具体的操作就不说了，想要知道可以百度<br></div><br>## 四：访问自己的博客<br><div style="background-color:#eee;padding:10px;">上传成功以后，在网页输入：<strong>你的用户名.github.io</strong>就可以访问自己的博客了</div>
-
-
-
-
-
-<hr>
-<ol>
-<li><p>用到的网址链接<br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网地址</a><br><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题网址</a></p>
-<hr>
-</li>
-</ol>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
       <a href="/2016/08/13/兼容性问题/">
   <time datetime="2016-08-13T14:58:57.000Z">
     2016-08-13
@@ -324,6 +84,52 @@
 <li>ie9之前 event.canceBubble = true;</li>
 </ul>
 </li>
+</ol>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/08/13/node-js/">
+  <time datetime="2016-08-13T02:32:23.000Z">
+    2016-08-13
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/08/13/node-js/">nodejs</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><a href="http://blog.csdn.net/zhangxin09/article/details/5836777" target="_blank" rel="external">nodejs一篇非常好的博客</a><br><strong>nodejs</strong></p>
+<ul>
+<li>v8 是非常快的js引擎，处理js执行运行的速度非常高</li>
+<li>定义：运行在服务端的js</li>
+<li><ol>
+<li>引入 required 模块：我们可以使用 require 指令来载入 Node.js 模块。</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>创建服务器：服务器可以监听客户端的请求，类似于 Apache 、Nginx 等 HTTP 服务器。</li>
+<li>接收请求与响应请求 服务器很容易创建，客户端可以使用浏览器或终端发送 HTTP 请求，服务器接收请求后返回响应数据。</li>
 </ol>
 
     
@@ -452,6 +258,52 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2016/08/09/jQuery/">
+  <time datetime="2016-08-09T02:32:36.000Z">
+    2016-08-09
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/08/09/jQuery/">jQuery</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <h2 id="jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率"><a href="#jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率" class="headerlink" title="jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率"></a>jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率</h2><ul>
+<li>jQuery能做的js都能做，js能做的jq不一定能做</li>
+<li>jq等文档加载完就加载，js是等文档和图片都加载完<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2></li>
+<li><p>jQuery.fn.init的功能是对传进来的selector参数进行分析，进行各种不同的处理，然后生成jQuery对象。</p>
+</li>
+<li><p>代码 </p>
+<div style="background-color:#eee;padding:10px;"><br> (function (window,undefined) {<br>      var jQuery = function () {<br>          //工厂函数<br>          return new jQuery.prototype.init();<br>      }<br>      jQuery.prototpye = {<br>          init : function () {<br>          }<br>      }<br>      jQuery.prototype.init.prototype = jQuery.prototype;<br><br>      window.$ = window.jQuery = jQuery;<br><br> })(window);<br><br></div>
+
+</li>
+</ul>
+<h3 id="好的文章链接"><a href="#好的文章链接" class="headerlink" title="好的文章链接"></a>好的文章链接</h3><ul>
+<li><a href="http://www.cnblogs.com/yangjunhua/archive/2012/12/27/2835989.html" target="_blank" rel="external">jQuery基础框架</a></li>
+</ul>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2016/07/10/好用的插件/">
   <time datetime="2016-07-10T11:54:37.000Z">
     2016-07-10
@@ -473,6 +325,118 @@
 </ul>
 <p>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。</p>
 <p>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br><a href="http://www.swiper.com.cn/" target="_blank" rel="external">中文网址</a></p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/02/11/作用域、沙箱、闭包/">
+  <time datetime="2016-02-11T13:45:45.000Z">
+    2016-02-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/02/11/作用域、沙箱、闭包/">作用域、沙箱、闭包</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>作用域</strong></p>
+<ul>
+<li>变量起作用的区域</li>
+<li>作用域链：在一个函数内部嵌套另外一个函数<br>注：不管在哪里调用，只管在哪里创建</li>
+</ul>
+<hr>
+<p><strong>闭包</strong></p>
+<ul>
+<li>定义：在函数内部定义的变量，在函数外部无法访问</li>
+</ul>
+<ol>
+<li>js中所有的函数都能形成闭包</li>
+<li>函数里面包裹其他函数，并且返回这个函数<br><div style="background-color:#eee;padding:10px"><br> function fn () {<br> var num = 123;<br> return function () {</div></li>
+</ol>
+<p>}<br>}<br>var n = fn();//结果：return 后面的函数体<br>n();<br></p>
+<hr>
+<p><strong>沙箱模式（自调用）</strong><br>作用：用于为一些来源不可信，无法判定意图的程序提供试验环境，对变量进行隔离<br>目的：减少全局污染<br>(function(){</p>
+<p>})()</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/02/04/我的第一篇博客/">
+  <time datetime="2016-02-04T10:54:52.000Z">
+    2016-02-04
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/02/04/我的第一篇博客/">如何用hexo+github创建博客</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
+
+<h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
+
+<h3 id="4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><a href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server" class="headerlink" title="4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server"></a>4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</h3><div style="background-color:#eee;padding:10px;">提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>这个时候博客就搭建完成了，就这么几个步骤，我竟然花了一整天的时间才研究一个入门，泪奔不过总归是完成了，还是很有成就感的，撒花</div>
+
+<h2 id="二：markdown的使用中遇到的问题"><a href="#二：markdown的使用中遇到的问题" class="headerlink" title="二：markdown的使用中遇到的问题"></a>二：markdown的使用中遇到的问题</h2><h3 id="1-源文件的位置"><a href="#1-源文件的位置" class="headerlink" title="1.源文件的位置"></a>1.源文件的位置</h3><div style="background-color:#eee;padding:10px;">源文件在本地的<em>/sources/_posts/</em>.md中,找到这个文件，就可以在里面通过markdown语法来写博客了</div>
+
+<h3 id="2-如何发布"><a href="#2-如何发布" class="headerlink" title="2.如何发布"></a>2.如何发布</h3><div style="background-color:#eee;padding:10px;">写好博客以后，在git bash中输入命令行：<strong>hexo g</strong>用来生成完成的博客，通过<strong>hexo s</strong>查看页面效果</div>
+
+<h3 id="3-遇到的乱码问题"><a href="#3-遇到的乱码问题" class="headerlink" title="3.遇到的乱码问题"></a>3.遇到的乱码问题</h3><div style="background-color:#eee;padding:10px;">在可以自己写博客时，我的心情是万分激动的，但是当我去页面查看时，发现我写的中文全部都是乱码，<br>乱码，乱码，重要的事情说三遍，起初以为是自己的markdown语法写错了，后来各种百度，各种查找，终于<br>在一篇文章中看到，原来是编码格式的问题，只要：<strong>将博客文件保存为UTF-8用记事本打开本地的博客文件“xxx.md”，然后点“另存为”，“编码(E):”选择“UTF-8”，点击“保存”，替换原文件。</strong><br></div>
+
+<h3 id="4-如何创建一篇新的博客"><a href="#4-如何创建一篇新的博客" class="headerlink" title="4.如何创建一篇新的博客"></a>4.如何创建一篇新的博客</h3><div style="background-color:#eee;padding:10px;">这个只要在命令行输入：<strong>hexo new “博客名称”</strong> 就妥妥的新建了一个新的博客，你可以去源文件的位置去找到这个文件</div>
+
+<h3 id="5-关于markddown语法"><a href="#5-关于markddown语法" class="headerlink" title="5.关于markddown语法"></a>5.关于markddown语法</h3><div style="background-color:#eee;padding:10px;">语法这个东西其实不多，直接百度markdown怎么写，或者去官网看看</div>
+
+<h2 id="三：上传到github上"><a href="#三：上传到github上" class="headerlink" title="三：上传到github上"></a>三：上传到github上</h2><div style="background-color:#eee;padding:10px;">在github上创建一个：<strong>自己的用户名.github.io</strong>的文件<br>在blog（本地创建的目录）下的public下 <strong>git bash here</strong>执行命令:<span style="color:red">git status用来查看状态，git add -A用来保存全部，git commit -m “存档的名字”</span>完成以后最后：<strong>git push 远程仓库的地址 master</strong>这里我用的是SSH的方式，可以免用户名和密码，具体的操作就不说了，想要知道可以百度<br></div><br>## 四：访问自己的博客<br><div style="background-color:#eee;padding:10px;">上传成功以后，在网页输入：<strong>你的用户名.github.io</strong>就可以访问自己的博客了</div>
+
+
+
+
+
+<hr>
+<ol>
+<li><p>用到的网址链接<br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网地址</a><br><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题网址</a></p>
+<hr>
+</li>
+</ol>
 
     
   </div>

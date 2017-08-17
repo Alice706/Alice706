@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>函数 | try you best</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="shc">
+  
+  
+    <meta name="description" content="创建函数的几种方式
+
+字面量
+function fn () { }
+
+
+函数表达式
+var fn =function () { }
+
+
+构造函数
+var fn = new Function ();
+var fn = new Function(‘hello’);
+
+
+自定义构造函数
+function Fn () { }var fn = new Fn();
+
+
+callee和caller
+callee">
+  
+  <meta name="description" content="创建函数的几种方式  字面量 function fn () { }   函数表达式 var fn =function () { }   构造函数 var fn = new Function (); var fn = new Function(‘hello’);   自定义构造函数 function Fn () { }var fn = new Fn();   callee和caller callee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数">
+<meta property="og:url" content="http://yoursite.com/2017/05/11/函数/index.html">
+<meta property="og:site_name" content="try you best">
+<meta property="og:description" content="创建函数的几种方式  字面量 function fn () { }   函数表达式 var fn =function () { }   构造函数 var fn = new Function (); var fn = new Function(‘hello’);   自定义构造函数 function Fn () { }var fn = new Fn();   callee和caller callee">
+<meta property="og:updated_time" content="2017-08-17T03:38:26.444Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="函数">
+<meta name="twitter:description" content="创建函数的几种方式  字面量 function fn () { }   函数表达式 var fn =function () { }   构造函数 var fn = new Function (); var fn = new Function(‘hello’);   自定义构造函数 function Fn () { }var fn = new Fn();   callee和caller callee">
+  
+    <link rel="alternate" href="/atom.xml" title="try you best" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">try you best</a></h1>
+    <p><a href="/"></a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/05/11/函数/">
+  <time datetime="2017-05-11T13:16:06.000Z">
+    2017-05-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">函数</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><strong>创建函数的几种方式</strong></p>
+<ol>
+<li>字面量<ul>
+<li>function fn () { }</li>
+</ul>
+</li>
+<li>函数表达式<ul>
+<li>var fn =function () { }</li>
+</ul>
+</li>
+<li>构造函数<ul>
+<li>var fn = new Function ();</li>
+<li>var fn = new Function(‘hello’);</li>
+</ul>
+</li>
+<li>自定义构造函数<ul>
+<li>function Fn () { }<br>var fn = new Fn();</li>
+</ul>
+<hr>
+<strong>callee和caller</strong><ul>
+<li>callee:argument对象所在的函数<br>作用：在函数内部指向函数自身<br>function fn (1,2,3) {<br>arguments.callee;//结果：这个函数体<br>arguments.callee();//递归<br>}  </li>
+<li>caller呼叫者<br>作用：显示该函数的调用者<br>如果fn()在全局调用，返回结果为<strong>null</strong><br>function fn (a,b) {<br>console.log(fn.caller);<br>}<br>function fn1 ( ) {<br>fn();<br>}</li>
+</ul>
+</li>
+</ol>
+<p>返回：function fn1 () {<br>    fn();<br>}</p>
+<hr>
+<p><strong>函数的四种调用模式</strong></p>
+<ol>
+<li>函数调用模式</li>
+<li>方法调用模式</li>
+<li>构造函数调用模式</li>
+<li>上下文调用模式（借用）apply()/call()</li>
+</ol>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2017 <a href="/">shc</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
