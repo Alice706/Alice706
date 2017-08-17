@@ -59,85 +59,6 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2017/08/09/jQuery/">
-  <time datetime="2017-08-09T02:32:36.486Z">
-    2017-08-09
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/09/jQuery/">jQuery</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h2 id="jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率"><a href="#jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率" class="headerlink" title="jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率"></a>jQuery就是js的一个库，把一些常用的功能进行了封装，方便我们调用，提高开发效率</h2><ul>
-<li>jQuery能做的js都能做，js能做的jq不一定能做</li>
-<li>jq等文档加载完就加载，js是等文档和图片都加载完<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2></li>
-<li><p>jQuery.fn.init的功能是对传进来的selector参数进行分析，进行各种不同的处理，然后生成jQuery对象。</p>
-</li>
-<li><p>代码 </p>
-<div style="background-color:#eee;padding:10px;"><br> (function (window,undefined) {<br>      var jQuery = function () {<br>          //工厂函数<br>          return new jQuery.prototype.init();<br>      }<br>      jQuery.prototpye = {<br>          init : function () {<br>          }<br>      }<br>      jQuery.prototype.init.prototype = jQuery.prototype;<br><br>      window.$ = window.jQuery = jQuery;<br><br> })(window);<br><br></div>
-
-</li>
-</ul>
-<h3 id="好的文章链接"><a href="#好的文章链接" class="headerlink" title="好的文章链接"></a>好的文章链接</h3><ul>
-<li><a href="http://www.cnblogs.com/yangjunhua/archive/2012/12/27/2835989.html" target="_blank" rel="external">jQuery基础框架</a></li>
-</ul>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/08/08/html部分整理/">
-  <time datetime="2017-08-08T13:46:59.999Z">
-    2017-08-08
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/08/08/html部分整理/">html部分整理</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
       <a href="/2017/08/07/gulp和webpack/">
   <time datetime="2017-08-07T11:12:51.454Z">
     2017-08-07
@@ -378,15 +299,168 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/1970/01/01/好用的插件/">
-  <time datetime="1970-01-01T00:00:02.017Z">
-    1970-01-01
+      <a href="/2016/08/13/兼容性问题/">
+  <time datetime="2016-08-13T14:58:57.000Z">
+    2016-08-13
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/1970/01/01/好用的插件/">好用的插件</a></h1>
+    <h1 class="title"><a href="/2016/08/13/兼容性问题/">兼容性问题</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <ol>
+<li>table里不加tbody在ie8里整个表格就不显示</li>
+<li>ie5-8不支持opacity<ul>
+<li>使用filter:alpha(opacity=60);ie5-7</li>
+</ul>
+</li>
+<li>阻止事件冒泡和捕获<ul>
+<li>ie9之前 event.canceBubble = true;</li>
+</ul>
+</li>
+</ol>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/08/10/一些小的知识点/">
+  <time datetime="2016-08-10T11:54:37.000Z">
+    2016-08-10
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/08/10/一些小的知识点/">一些小的知识点</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p> <div style="background-color:skyblue;padding:2px 10px;"><strong>link和@import的区别</strong></div></p>
+<ol>
+<li>link属于html标签，而@import是css提供的。</li>
+<li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
+<li>link是xhtml标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
+<li>link方式样式的权重高于@import的。</li>
+<li>link支持使用js控制dom改变样式<div style="background-color:skyblue;padding:2px 10px;"><strong>CDN内容分布网络</strong></div></li>
+</ol>
+<ul>
+<li>避开网络上有可能影响数据传输速度和稳定性的瓶颈和环节<div style="background-color:skyblue;padding:2px 10px;"><strong>return false</strong></div></li>
+<li>jQuery中，既能阻止事件冒泡，也能阻止默认事件</li>
+<li>js中，只能阻止默认事件<div style="background-color:skyblue;padding:2px 10px;"><strong>less</strong></div></li>
+<li>l. ess是css预处理器，1添加了一些编程的特性</li>
+<li><ol>
+<li>让css代码更简洁，3代码更直观，便于后期维护，减少无意义的机械劳动<div style="background-color:skyblue;padding:2px 10px;"><strong>eval</strong></div></li>
+</ol>
+</li>
+<li>把字符串的内容作为js的代码执行</li>
+<li>和Function的区别：Function()中的方法体是字符串，必须调用才能执行<div style="background-color:skyblue;padding:2px 10px;"><strong>html5语义化的理解</strong></div></li>
+<li>用正确的标签包含正确的内容<div style="background-color:skyblue;padding:2px 10px;"><strong>cookie、sessionStorage、localeStorage的区别</strong></div></li>
+<li>cookie是存储在浏览器端，并且随浏览器的请求一起发送到服务器端的，它有一定的过期时间，到了过期时间自动会消失。sessionStorage和localeStorage也是存储在客户端的，同属于web Storage，比cookie的存储大小要大有8m，cookie只有4kb，localeStorage是持久化的存储在客户端，如果用户不手动清除的话，不会自动消失，会一直存在，sessionStorage也是存储在客户端，但是它的存活时间是在一个回话期间，只要浏览器的回话关闭了就会自动消失。<div style="background-color:skyblue;padding:2px 10px;"><strong>重构、回流</strong></div></li>
+<li><p>浏览器的重构指的是改变每个元素外观时所触发的浏览器行为，比如颜色，背景等样式发生了改变而进行的重新构造新外观的过程。重构不会引发页面的重新布局，不一定伴随着回流，回流指的是浏览器为了重新渲染页面的需要而进行的重新计算元素的几何大小和位置的，他的开销是非常大的，回流可以理解为渲染树需要重新进行计算，一般最好触发元素的重构，避免元素的回流；比如通过通过添加类来添加css样式，而不是直接在DOM上设置，当需要操作某一块元素时候，最好使其脱离文档流，这样就不会引起回流了，比如设置position：absolute或者fixed，或者display：none，等操作结束后在显示。</p>
+<div style="background-color:skyblue;padding:2px 10px;"><strong>内置对象、宿主对象、本地对象</strong>、</div></li>
+<li>内置对象有些对象有自己的属性和方法，无需实例化，这就是内置对象<ul>
+<li>内置对象： Math Global(isNaN,parseInt(),parseFloat是它的方法)</li>
+</ul>
+</li>
+<li>本地对象必须new实例化才能使用其属性和方法的是本地对象<ul>
+<li>常见本地对象：Object Function Array Boolean Number Date RegExp</li>
+</ul>
+</li>
+<li><p>宿主对象：window document body</p>
+<div style="background-color:skyblue;padding:2px 10px;"><strong>跨域的几种方式</strong></div></li>
+<li><p>jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特性，是一种新协议）跨域、设置代理服务器（由服务器替我们向不同源的服务器请求数据）、CORS（跨源资源共享，cross origin resource sharing）、iframe跨域、postMessage(包含iframe的页面向iframe传递消息)</p>
+<div style="background-color:skyblue;padding:2px 10px;"><strong>http状态码</strong></div></li>
+<li><p>http状态码是表示服务器对请求的响应状态，主要分为以下几个部分</p>
+<ul>
+<li><p>1：这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束</p>
+</li>
+<li><p>2：表示请求成功，</p>
+</li>
+<li><p>3：表示重定向</p>
+</li>
+<li><p>4：表示客户端错误</p>
+</li>
+<li><p>5：表示服务器端错误</p>
+</li>
+</ul>
+<p><div style="background-color:skyblue;padding:2px 10px;"><strong>怪异模式和标准模式</strong></div></p>
+<ul>
+<li>如果有DTD(文档声明)，就是标准模式，因为在ie6之前没有DTD</li>
+<li>标准模式是指浏览器按照W3C标准解析执行代码，怪异模式则是浏览器自己的方式解析执行代码</li>
+</ul>
+<p><div style="background-color:skyblue;padding:2px 10px;"><strong>web标准</strong></div></p>
+<ul>
+<li>web标准简单来说可以分为结构、表现、行为</li>
+</ul>
+<p><div style="background-color:skyblue;padding:2px 10px;"><strong>一次Js请求一般情况下有哪些地方会有缓存</strong></div></p>
+<ul>
+<li><p>DNS，CDN（内容分发网络）,浏览器，服务器</p>
+<p><div style="background-color:skyblue;padding:2px 10px;"><strong>如何让一个dom元素不显示在浏览器的可视范围内</strong></div></p>
+<ol>
+<li>display:none</li>
+<li>visibility:hidden</li>
+<li>设置宽高为0</li>
+<li>设置透明度为0</li>
+<li>z-index:3000px<div style="background-color:skyblue;padding:2px 10px;"><strong>解决行内块元素换行有间隙的问题</strong></div></li>
+<li>将元素写成一行，中间不换行</li>
+<li>设置父元素的font-size:0,再给自己设置字体大小</li>
+<li>设置margin负值</li>
+<li>让行内块元素浮动</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/07/10/好用的插件/">
+  <time datetime="2016-07-10T11:54:37.000Z">
+    2016-07-10
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2016/07/10/好用的插件/">好用的插件</a></h1>
   
 
   </header>
@@ -398,7 +472,7 @@
 <li>Swiper常用于移动端网站的内容触摸滑动</li>
 </ul>
 <p>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。</p>
-<p>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。</p>
+<p>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br><a href="http://www.swiper.com.cn/" target="_blank" rel="external">中文网址</a></p>
 
     
   </div>
@@ -416,7 +490,7 @@
 
   <nav id="pagination">
   
-    <a href="/" class="prev">Prev</a>
+    <a href="/" class="prev">上一页</a>
   
   
   <div class="clearfix"></div>
