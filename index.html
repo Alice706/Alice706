@@ -229,68 +229,6 @@
 
 
   
-    <article id="post-html部分整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/html部分整理/">html部分整理</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/08/html部分整理/" class="archive-article-date">
-  	<time datetime="2017-08-08T13:46:59.999Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/08/html部分整理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -558,6 +496,79 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/28/vue/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue中的过滤器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/25/vue中的过滤器/">vue中的过滤器</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/25/vue中的过滤器/" class="archive-article-date">
+  	<time datetime="2017-03-25T15:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>组件内的过滤器</strong></p>
+<ul>
+<li><p>在options中加入属性filters，是一个对象</p>
+<ul>
+<li>key:过滤器的名字</li>
+<li>value:过滤器具体实现</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">  - 使用方式:<span class="string">"&#123;&#123; XXX | 过滤器名&#125;&#125;"</span></div><div class="line"> app.vue</div><div class="line"></div><div class="line">  &lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">      &lt;input type=<span class="string">"text"</span> v-model=<span class="string">"text"</span>&gt;</div><div class="line">      &#123;&#123;text | filt&#125;&#125;   <span class="comment">// 结果就是value</span></div><div class="line">  &lt;<span class="regexp">/div&gt;  </span></div><div class="line"><span class="regexp">&lt;/</span>template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    data()&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            text:<span class="string">'我是父组件传递过来的信息'</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    methods:&#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    filters:&#123;</div><div class="line">        filt:<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> value</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>全局过滤器</strong><br> Vue.filter(‘过滤器名’,fn)</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">main.js中</div><div class="line">  Vue.filter(<span class="string">'go'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="number">22</span></div><div class="line">    &#125;)</div><div class="line"></div><div class="line">  app.vue中</div><div class="line"></div><div class="line">  &lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">      &lt;input type=<span class="string">"text"</span> v-model=<span class="string">"text"</span>&gt;</div><div class="line">      &#123;&#123;text | go&#125;&#125;  <span class="comment">//结果是22</span></div><div class="line">  &lt;<span class="regexp">/div&gt;  </span></div><div class="line"><span class="regexp">&lt;/</span>template&gt;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/25/vue中的过滤器/">展开全文 >></a>
         </p>
       
 
