@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>vue起航 | try you best</title>
+  <title>vue起航4 子向父发起通信和过滤器 | try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="组件化和模块化  组件化更多关注的UI部分，页面的每个部件，比如头部，内容区，弹出框甚至确认按钮都可以成为一个组件，每个组件有独立的HTML、css、js代码。  可以根据需要把它放在页面的任意部位，也可以和其他组件一起形成新的组件。一个页面是各个组件的结合，可以根据需要进行组装。  而模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue起航">
-<meta property="og:url" content="http://yoursite.com/2017/08/22/vue起航/index.html">
+<meta property="og:title" content="vue起航4 子向父发起通信和过滤器">
+<meta property="og:url" content="http://yoursite.com/2017/03/23/vue起航4-子向父发起通信和过滤器/index.html">
 <meta property="og:site_name" content="try you best">
-<meta property="og:description" content="组件化和模块化  组件化更多关注的UI部分，页面的每个部件，比如头部，内容区，弹出框甚至确认按钮都可以成为一个组件，每个组件有独立的HTML、css、js代码。  可以根据需要把它放在页面的任意部位，也可以和其他组件一起形成新的组件。一个页面是各个组件的结合，可以根据需要进行组装。  而模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成">
-<meta property="og:updated_time" content="2017-08-22T13:18:50.125Z">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
+<meta property="og:updated_time" content="2017-08-23T08:17:01.978Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue起航">
-<meta name="twitter:description" content="组件化和模块化  组件化更多关注的UI部分，页面的每个部件，比如头部，内容区，弹出框甚至确认按钮都可以成为一个组件，每个组件有独立的HTML、css、js代码。  可以根据需要把它放在页面的任意部位，也可以和其他组件一起形成新的组件。一个页面是各个组件的结合，可以根据需要进行组装。  而模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成">
+<meta name="twitter:title" content="vue起航4 子向父发起通信和过滤器">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
   
     <link rel="alternative" href="/atom.xml" title="try you best" type="application/atom+xml">
   
@@ -153,64 +153,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue起航" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue起航4-子向父发起通信和过滤器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vue起航
+      vue起航4 子向父发起通信和过滤器
     </h1>
   
 
         
-        <a href="/2017/08/22/vue起航/" class="archive-article-date">
-  	<time datetime="2017-08-22T11:13:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
+        <a href="/2017/03/23/vue起航4-子向父发起通信和过滤器/" class="archive-article-date">
+  	<time datetime="2017-03-22T16:43:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>组件化和模块化</strong></p>
-<ul>
-<li><p>组件化更多关注的UI部分，页面的每个部件，比如头部，内容区，弹出框甚至确认按钮都可以成为一个组件，每个组件有独立的HTML、css、js代码。</p>
-</li>
-<li><p>可以根据需要把它放在页面的任意部位，也可以和其他组件一起形成新的组件。一个页面是各个组件的结合，可以根据需要进行组装。</p>
-</li>
-<li><p>而模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块。<br><strong>开发方式</strong></p>
-<ul>
-<li>引包的方式 引入vue/dist/vue.js</li>
-<li>构建工具（webpack） 编写 xxx.vue</li>
-</ul>
-<ul>
-<li>通过引包的方式文件大小比构建工具方式的30%（因为包含了对模板编译成dom的编译器）<br><strong>vue文件</strong><br>*包含三个部分<ul>
-<li>1：<tempalte></tempalte> DOM元素</li>
-<li>2: <script></script> 对当前文件所生产的东西的配置</li>
-<li>3: <style></style> 样式<br><strong>vue全家桶</strong></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>vuex能转换vue代码，成为移动端原生应用 ios android PC(大型项目必用)</li>
-</ul>
-</li>
-</ul>
-<p><strong>核心特点</strong></p>
-<ul>
-<li>组件化，组件化比模块化更细分（组成页面的部件）</li>
-<li>组件：模板+动态效果+样式</li>
-<li>组件内可以使用模块，模块内不能使用组件<br><strong>双向数据流</strong></li>
-<li>内存js对象的属性发生改变影响页面</li>
-<li>页面发生改变影响内存（js对象的属性）<br><strong>数据驱动</strong><ul>
-<li>内存的属性发生改变，驱动页面的显示做调整<br>注：IE9以下不支持<br><strong>善于开发单页面应用</strong><br><strong>热替换</strong></li>
-</ul>
-</li>
-<li>webpack-dev-server –hot 热模块替换的好处是只替换更新的部分,而不是页面重载.</li>
-</ul>
-<hr>
-<p><strong>第一个vue效果</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span>:创建index.html文件，并在页面中留一个坑，以后生成的vue代码会显示在这里</div><div class="line"> <span class="number">2</span>：在入口mian.js中，引入vue对象（构造函数）</div><div class="line"> <span class="number">3</span>：创建一个vue实例</div><div class="line">  - <span class="keyword">new</span> Vue(options)</div><div class="line"> <span class="number">4</span>：配置options对象</div><div class="line">   - 目的地</div><div class="line">   - 渲染的内容</div><div class="line"></div><div class="line"></div><div class="line">   index.html文件中的内容</div><div class="line">   &lt;div id = <span class="string">'app'</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">   main.js文件中的内容</div><div class="line">       <span class="comment">// 引入vue</span></div><div class="line">    <span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line">    <span class="comment">// 引入 app.vue模块</span></div><div class="line">    <span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line">    <span class="comment">// 构建vue 实例</span></div><div class="line">    <span class="keyword">new</span> Vue(&#123;</div><div class="line">        <span class="comment">// 目的地</span></div><div class="line">        el:<span class="string">'#app'</span>,</div><div class="line">        render:<span class="function"><span class="keyword">function</span>(<span class="params">creater</span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> creater(App);</div><div class="line">        <span class="comment">// return &lt;ul&gt;&lt;li&gt;hello&lt;/li&gt;&lt;/ul&gt;</span></div><div class="line">        &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">    app.vue文件中的内容</div><div class="line">    &lt;template&gt;</div><div class="line">        &lt;div&gt;hello&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>template&gt;</div><div class="line">    &lt;script&gt;&lt;/script&gt;</div><div class="line">    &lt;style&gt;&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">   父组件子组件通信的桥梁</div><div class="line">    在connector.js文件中</div><div class="line"></div><div class="line">   <span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vue();</div><div class="line"></div><div class="line">  父组件中</div><div class="line"></div><div class="line">  &lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;son-vue :text=<span class="string">"hello"</span>&gt;&lt;/son-vue&gt;</div><div class="line"></div><div class="line">    &lt;button @click="listen"&gt;马上要接电话了&lt;/button&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">/</span><span class="regexp">/ 引入中间通信的对象</span></div><div class="line"><span class="regexp">import Connector from './</span>connector.js<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">   import sonVue from '</span>./son.vue<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    export default &#123;</span></div><div class="line"><span class="string">        data()&#123;</span></div><div class="line"><span class="string">            return &#123;</span></div><div class="line"><span class="string">              hello:'</span>我是父组件传递过来的信息<span class="string">'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        methods:&#123;</span></div><div class="line"><span class="string">          listen()&#123;</span></div><div class="line"><span class="string">            console.log('</span>我要开始接受信息了<span class="string">')</span></div><div class="line"><span class="string">            Connector.$on('</span>call<span class="string">',function (palce) &#123;</span></div><div class="line"><span class="string">              console.log('</span>我接收到了信息<span class="string">')</span></div><div class="line"><span class="string">            &#125;)</span></div><div class="line"><span class="string">          &#125;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">        ,</span></div><div class="line"><span class="string">        components:&#123;sonVue:sonVue&#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">子组件中</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;template&gt;</span></div><div class="line"><span class="string">   &lt;div&gt;</span></div><div class="line"><span class="string">       &#123;&#123;text&#125;&#125;</span></div><div class="line"><span class="string">       &lt;button @click="call"&gt;开始打电话&lt;/button&gt;</span></div><div class="line"><span class="string">   &lt;/div&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/template&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">// 引入连接通信的对象</span></div><div class="line"><span class="string">import Connector from '</span>./connector.js<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">export default &#123;</span></div><div class="line"><span class="string">    data()&#123;</span></div><div class="line"><span class="string">        return &#123;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;,</span></div><div class="line"><span class="string">    methods:&#123;</span></div><div class="line"><span class="string">        call()&#123;</span></div><div class="line"><span class="string">            console.log('</span>打电话了<span class="string">')</span></div><div class="line"><span class="string">            Connector.$emit('</span>call<span class="string">','</span>上海<span class="string">')</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">    ,</span></div><div class="line"><span class="string">    props:['</span>text<span class="string">']</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div></pre></td></tr></table></figure>
 
       
 
@@ -290,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/22/vue起航/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/23/vue起航4-子向父发起通信和过滤器/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -304,18 +267,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/22/babel-js代码转换器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/28/vue/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          vue起航2 (babel)
+          vue起航3 子组件和全局组件的使用
         
       </div>
     </a>
   
   
-    <a href="/2017/08/21/回调地狱，promisee/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">回调地狱，promise</div>
+    <a href="/2017/03/22/babel-js代码转换器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue起航2 (babel)</div>
       <i class="icon-circle-right"></i>
     </a>
   

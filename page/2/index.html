@@ -151,92 +151,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-cookie和session" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/09/cookie和session/">cookie和session</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/09/cookie和session/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:34:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>为什么会出现cookie和session</strong></p>
-<ul>
-<li>由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session(比如：购物车)</li>
-<li>HTTP协议是无状态的协议，一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话</li>
-</ul>
-<ol>
-<li><strong>cookie机制和session机制的区别</strong></li>
-</ol>
-<ul>
-<li>cookie是存储在客户端，session机制采用的是在服务端保持状态的方案</li>
-<li><p>session 的运行依赖 session id，而 session id 是存在 cookie 中的，也就是说，如果浏览器禁用了 cookie ，同时 session 也会失效（但是可以通过其它方式实现，比如在 url 中传递 session_id）</p>
-</li>
-<li><p>由于在服务端保持状态的方案在客户端也需要保持一个标识，所以session机制可能需要借助cookie机制达到保存标识的目的</p>
-</li>
-</ul>
-<ol>
-<li><strong>过期时间</strong></li>
-</ol>
-<ul>
-<li>（会话cookie）cookie默认生命周期为浏览器关闭，cookie消失，保存在内存中</li>
-<li>（持久cookie）设置了周期，会被保存到硬盘上</li>
-</ul>
-<hr>
-<p><a href="http://www.blogjava.net/cheneyfree/archive/2007/05/26/120168.html" target="_blank" rel="external">详细解释的网址</a><br><a href="http://blog.csdn.net/bigpudding24/article/details/51156146" target="_blank" rel="external">一篇好的博客</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/09/cookie和session/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-流式布局，响应式布局和rem" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1006,6 +920,86 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/07/10/好用的插件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-作用域、沙箱、闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/11/作用域、沙箱、闭包/">作用域、沙箱、闭包</a>
+    </h1>
+  
+
+        
+        <a href="/2016/02/11/作用域、沙箱、闭包/" class="archive-article-date">
+  	<time datetime="2016-02-11T13:45:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>作用域</strong></p>
+<ul>
+<li>变量起作用的区域</li>
+<li>作用域链：在一个函数内部嵌套另外一个函数<br>注：不管在哪里调用，只管在哪里创建</li>
+</ul>
+<hr>
+<p><strong>闭包</strong></p>
+<ul>
+<li>定义：在函数内部定义的变量，在函数外部无法访问</li>
+</ul>
+<ol>
+<li>js中所有的函数都能形成闭包</li>
+<li>函数里面包裹其他函数，并且返回这个函数<br><div style="background-color:#eee;padding:10px"><br> function fn () {<br> var num = 123;<br> return function () {</div></li>
+</ol>
+<p>}<br>}<br>var n = fn();//结果：return 后面的函数体<br>n();<br></p>
+<hr>
+<p><strong>沙箱模式（自调用）</strong><br>作用：用于为一些来源不可信，无法判定意图的程序提供试验环境，对变量进行隔离<br>目的：减少全局污染<br>(function(){</p>
+<p>})()</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/02/11/作用域、沙箱、闭包/">展开全文 >></a>
         </p>
       
 

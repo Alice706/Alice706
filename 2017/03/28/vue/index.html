@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mongodb | try you best</title>
+  <title>vue起航3 子组件和全局组件的使用 | try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="定义  MongoDB是一个可扩展的，高性能的开源NoSQL数据库。">
+  <meta name="description" content="作用  构造用户界面的渐进式框架 Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。局部组件的代码 引入子组件 声明子组件的依赖 使用子组件123456789101112131415161718192021222324252627282930313233app.vue组件中&amp;lt;template&amp;gt;        &amp;lt;div&amp;gt;     &amp;lt;header-vue&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mongodb">
-<meta property="og:url" content="http://yoursite.com/2017/08/13/Mongodb/index.html">
+<meta property="og:title" content="vue起航3 子组件和全局组件的使用">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/vue/index.html">
 <meta property="og:site_name" content="try you best">
-<meta property="og:description" content="定义  MongoDB是一个可扩展的，高性能的开源NoSQL数据库。">
-<meta property="og:updated_time" content="2017-08-16T15:09:58.456Z">
+<meta property="og:description" content="作用  构造用户界面的渐进式框架 Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。局部组件的代码 引入子组件 声明子组件的依赖 使用子组件123456789101112131415161718192021222324252627282930313233app.vue组件中&amp;lt;template&amp;gt;        &amp;lt;div&amp;gt;     &amp;lt;header-vue&amp;">
+<meta property="og:updated_time" content="2017-08-23T08:17:20.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mongodb">
-<meta name="twitter:description" content="定义  MongoDB是一个可扩展的，高性能的开源NoSQL数据库。">
+<meta name="twitter:title" content="vue起航3 子组件和全局组件的使用">
+<meta name="twitter:description" content="作用  构造用户界面的渐进式框架 Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。局部组件的代码 引入子组件 声明子组件的依赖 使用子组件123456789101112131415161718192021222324252627282930313233app.vue组件中&amp;lt;template&amp;gt;        &amp;lt;div&amp;gt;     &amp;lt;header-vue&amp;">
   
     <link rel="alternative" href="/atom.xml" title="try you best" type="application/atom+xml">
   
@@ -153,30 +153,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mongodb" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mongodb
+      vue起航3 子组件和全局组件的使用
     </h1>
   
 
         
-        <a href="/2017/08/13/Mongodb/" class="archive-article-date">
-  	<time datetime="2017-08-13T02:31:52.086Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-13</time>
+        <a href="/2017/03/28/vue/" class="archive-article-date">
+  	<time datetime="2017-03-28T12:07:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>定义</strong></p>
+        <p><strong>作用</strong></p>
 <ul>
-<li>MongoDB是一个可扩展的，高性能的开源NoSQL数据库。</li>
+<li>构造用户界面的渐进式框架</li>
+<li>Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。<br><strong>局部组件的代码</strong><ol>
+<li>引入子组件</li>
+<li>声明子组件的依赖</li>
+<li>使用子组件<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">app.vue组件中</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">    </div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;header-vue&gt;&lt;/header-vue&gt;</div><div class="line">     </div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">/</span><span class="regexp">/ 引入子组件</span></div><div class="line"><span class="regexp">import headerVue from './</span>header.vue<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">// 加载子组件依赖</span></div><div class="line"><span class="string">export default &#123;</span></div><div class="line"><span class="string">    main()&#123;</span></div><div class="line"><span class="string">        return &#123;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;,</span></div><div class="line"><span class="string">    components:&#123;</span></div><div class="line"><span class="string">        headerVue:headerVue</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">   </span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;/style&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
 </ul>
+<p><strong>全局组件</strong></p>
+<ul>
+<li>在入口的main.js中引入子组件</li>
+<li>用Vue来注册全局组件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  main.js中</div><div class="line"> <span class="comment">// 引入vue</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="comment">// 引入 app.vue</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 引入子组件</span></div><div class="line"><span class="keyword">import</span> vueHeader <span class="keyword">from</span> <span class="string">'./header.vue'</span>;</div><div class="line"><span class="comment">// 注册全局组件</span></div><div class="line">Vue.component(<span class="string">'vueHeader'</span>,vueHeader);</div><div class="line"></div><div class="line"><span class="comment">// 实例化vue</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    el:<span class="string">'#app'</span>,</div><div class="line">    render:<span class="function"><span class="params">c</span>=&gt;</span>c(App)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>父组件向子组件传递参数</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"> app.vue页面代码</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">   &lt;son-vue :text=<span class="string">"hello"</span>&gt;&lt;/son-vue&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">    </div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">/</span><span class="regexp">/ 引入子组件对象</span></div><div class="line"><span class="regexp">import sonVue from './</span>son.vue<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">export default &#123;</span></div><div class="line"><span class="string">    data()&#123;</span></div><div class="line"><span class="string">        return &#123;</span></div><div class="line"><span class="string">            hello:'</span>你好世界<span class="string">'</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;,</span></div><div class="line"><span class="string">    components:&#123;</span></div><div class="line"><span class="string">        sonVue:sonVue</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">//son.vue页面代码</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;template&gt;</span></div><div class="line"><span class="string">    &lt;div&gt;</span></div><div class="line"><span class="string">       &#123;&#123;text&#125;&#125;</span></div><div class="line"><span class="string">    &lt;/div&gt;</span></div><div class="line"><span class="string">&lt;/template&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    export default &#123;</span></div><div class="line"><span class="string">        data()&#123;</span></div><div class="line"><span class="string">            return &#123;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        props:['</span>text<span class="string">']  //返回一个数组，里面传的参数就是组件对应的参数</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div></pre></td></tr></table></figure></p>
 
       
 
@@ -256,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/13/Mongodb/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/28/vue/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +284,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/21/回调地狱，promisee/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/11/对象/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          回调地狱，promise
+          对象、面向对象、原型
         
       </div>
     </a>
   
   
-    <a href="/2017/08/08/html部分整理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">html部分整理</div>
+    <a href="/2017/03/23/vue起航4-子向父发起通信和过滤器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue起航4 子向父发起通信和过滤器</div>
       <i class="icon-circle-right"></i>
     </a>
   
