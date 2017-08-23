@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | try you best</title>
+  <title>vue起航2 (babel) | try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="try you best">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue起航2 (babel)">
+<meta property="og:url" content="http://yoursite.com/2017/08/22/babel-js代码转换器/index.html">
 <meta property="og:site_name" content="try you best">
+<meta property="og:description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
+<meta property="og:updated_time" content="2017-08-22T14:19:53.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="try you best">
+<meta name="twitter:title" content="vue起航2 (babel)">
+<meta name="twitter:description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
   
     <link rel="alternative" href="/atom.xml" title="try you best" type="application/atom+xml">
   
@@ -149,305 +153,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-babel-js代码转换器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue起航2 (babel)
+    </h1>
+  
+
+        
+        <a href="/2017/08/22/babel-js代码转换器/" class="archive-article-date">
+  	<time datetime="2017-08-22T11:18:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="babel-js代码转换器"><a href="#babel-js代码转换器" class="headerlink" title="babel js代码转换器"></a>babel js代码转换器</h3><p><strong>可以用来转换ES6/ES7/react… =&gt;ES5的代码</strong><br><strong>配合webpack一起使用</strong></p>
+<ul>
+<li>缺点：<ul>
+<li>使用babel默认只解析关键字，不处理函数</li>
+<li>解决方案： 设置 ES6,插件：转换函数</li>
+</ul>
+</li>
+<li>创建配置文件：<ul>
+<li>.babelrc文件</li>
+<li>数据是一个Json对象<ul>
+<li>{“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’]}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>package.json中的代码</strong></p>
+<ul>
+<li>dependencies：项目生产所依赖的模块</li>
+<li>devDependencies：项目开发所需要的模块</li>
+<li>–save参数表示将该模块写入dependencies属性，</li>
+<li>–save-dev表示将该模块写入devDependencies属性。<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">   <span class="string">"dev"</span>: <span class="string">"node_modules\\.bin\\webpack-dev-server --inline --hot --open --port 8080"</span>, 开发环境</div><div class="line">   <span class="string">"build"</span>:<span class="string">"webpack"</span>  生产环境（产品上线）</div><div class="line"> &#125;,</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p><strong>常用指令</strong></p>
+<p> 注： v-bind:class可以简写为 :class<br> v-bind是给属性赋值<br>      v-on:click=”<em>*</em>“可以简写为: @click<br>      v-on是给事件做绑定，配合methods使用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"> &lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;div :<span class="class"><span class="keyword">class</span></span>=<span class="string">"c1"</span>&gt;我是方块一&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">     &lt;div :class="c2"&gt;我是方块二&lt;/</span>div&gt;</div><div class="line">     &lt;button v-on:click=<span class="string">"changecolor"</span>&gt;切换颜色&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">        </span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">export default &#123;</span></div><div class="line"><span class="regexp">    data()&#123;</span></div><div class="line"><span class="regexp">        return &#123;</span></div><div class="line"><span class="regexp">            c1:'red',</span></div><div class="line"><span class="regexp">            c2:'green'</span></div><div class="line"><span class="regexp">        &#125;</span></div><div class="line"><span class="regexp">    &#125;,</span></div><div class="line"><span class="regexp">    methods:&#123;</span></div><div class="line"><span class="regexp">        changecolor()&#123;</span></div><div class="line"><span class="regexp">            this.c1='green',</span></div><div class="line"><span class="regexp">            this.c2="red"</span></div><div class="line"><span class="regexp">        &#125;</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">div div&#123;</div><div class="line">    height:<span class="number">200</span>px;</div><div class="line">&#125;</div><div class="line">.red&#123;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line">.green&#123;</div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line">    </div><div class="line">&lt;<span class="regexp">/style&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>基本指令</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">    &lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">      &lt;div v-text=<span class="string">"hello"</span>&gt;&lt;/div&gt;</div><div class="line">      &lt;div v-html=<span class="string">"vHtml"</span>&gt;&lt;/div&gt;</div><div class="line">      &lt;div v-<span class="keyword">if</span>=<span class="string">"vIf"</span>&gt;我是通过添加删除dom节点&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">      &lt;div v-show="vShow"&gt;我是通过设置属性display:none&lt;/</span>div&gt;</div><div class="line">      &lt;input v-model=<span class="string">"value"</span>&gt;&#123;&#123;value&#125;&#125;</div><div class="line">      &lt;<span class="regexp">/hr&gt;</span></div><div class="line"><span class="regexp">      &lt;input v-bind:value="single"&gt;&#123;&#123;single&#125;&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">  &lt;/</span>div&gt;</div><div class="line">    </div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">export default &#123;</span></div><div class="line"><span class="regexp">    data()&#123;</span></div><div class="line"><span class="regexp">        return &#123;</span></div><div class="line"><span class="regexp">            hello:'类似js中的innerText',</span></div><div class="line"><span class="regexp">            vHtml:'&lt;h3&gt;类似js中的innerHTML&lt;/</span>h3&gt;<span class="string">',</span></div><div class="line"><span class="string">            vIf:true,</span></div><div class="line"><span class="string">            vShow:true,</span></div><div class="line"><span class="string">            value:'</span>我是双向数据绑定,我改变后面的内容跟着变<span class="string">',</span></div><div class="line"><span class="string">            single:'</span>我是单向数据绑定，我改变，后面数据不变<span class="string">'</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;&lt;/style&gt;</span></div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/cookie和session/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:34:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/cookie和session/">cookie和session</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/09/流式布局，响应式布局和rem/" class="archive-article-date">
-  	<time datetime="2017-02-09T08:24:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/09/流式布局，响应式布局和rem/">流式布局，响应式布局，弹性布局和rem</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/04/ajax和json以及jsonP/" class="archive-article-date">
-  	<time datetime="2017-01-04T10:54:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/AMD和CMD/" class="archive-article-date">
-  	<time datetime="2016-12-05T11:56:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/AMD和CMD/">require.js</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/22/babel-js代码转换器/" alt="微信分享二维码">
+    </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/07/gulp和webpack/" class="archive-article-date">
-  	<time datetime="2016-10-07T11:12:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-07</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/08/23/vue起航4-子向父发起通信和过滤器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue起航4 子向父发起通信和过滤器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/22/vue起航/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue起航</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/07/gulp和webpack/">gulp和webpack</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/兼容性问题/" class="archive-article-date">
-  	<time datetime="2016-08-13T14:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/兼容性问题/">兼容性问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/node-js/" class="archive-article-date">
-  	<time datetime="2016-08-13T02:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/node-js/">nodejs</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/10/一些小的知识点/" class="archive-article-date">
-  	<time datetime="2016-08-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/10/一些小的知识点/">一些小的知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/09/jQuery/" class="archive-article-date">
-  	<time datetime="2016-08-09T02:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/jQuery/">jQuery</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/10/好用的插件/" class="archive-article-date">
-  	<time datetime="2016-07-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/10/好用的插件/">好用的插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +360,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

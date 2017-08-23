@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | try you best</title>
+  <title>vue起航4 子向父发起通信和过滤器 | try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="try you best">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue起航4 子向父发起通信和过滤器">
+<meta property="og:url" content="http://yoursite.com/2017/08/23/vue起航4-子向父发起通信和过滤器/index.html">
 <meta property="og:site_name" content="try you best">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
+<meta property="og:updated_time" content="2017-08-22T17:07:05.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="try you best">
+<meta name="twitter:title" content="vue起航4 子向父发起通信和过滤器">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283   父组件子组件通信的桥梁    在connector.js文件中   import">
   
     <link rel="alternative" href="/atom.xml" title="try you best" type="application/atom+xml">
   
@@ -149,305 +153,153 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue起航4-子向父发起通信和过滤器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue起航4 子向父发起通信和过滤器
+    </h1>
+  
+
+        
+        <a href="/2017/08/23/vue起航4-子向父发起通信和过滤器/" class="archive-article-date">
+  	<time datetime="2017-08-22T16:43:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">   父组件子组件通信的桥梁</div><div class="line">    在connector.js文件中</div><div class="line"></div><div class="line">   <span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vue();</div><div class="line"></div><div class="line">  父组件中</div><div class="line"></div><div class="line">  &lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;son-vue :text=<span class="string">"hello"</span>&gt;&lt;/son-vue&gt;</div><div class="line"></div><div class="line">    &lt;button @click="listen"&gt;马上要接电话了&lt;/button&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">/</span><span class="regexp">/ 引入中间通信的对象</span></div><div class="line"><span class="regexp">import Connector from './</span>connector.js<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">   import sonVue from '</span>./son.vue<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    export default &#123;</span></div><div class="line"><span class="string">        data()&#123;</span></div><div class="line"><span class="string">            return &#123;</span></div><div class="line"><span class="string">              hello:'</span>我是父组件传递过来的信息<span class="string">'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        methods:&#123;</span></div><div class="line"><span class="string">          listen()&#123;</span></div><div class="line"><span class="string">            console.log('</span>我要开始接受信息了<span class="string">')</span></div><div class="line"><span class="string">            Connector.$on('</span>call<span class="string">',function (palce) &#123;</span></div><div class="line"><span class="string">              console.log('</span>我接收到了信息<span class="string">')</span></div><div class="line"><span class="string">            &#125;)</span></div><div class="line"><span class="string">          &#125;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">        ,</span></div><div class="line"><span class="string">        components:&#123;sonVue:sonVue&#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">子组件中</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;template&gt;</span></div><div class="line"><span class="string">   &lt;div&gt;</span></div><div class="line"><span class="string">       &#123;&#123;text&#125;&#125;</span></div><div class="line"><span class="string">       &lt;button @click="call"&gt;开始打电话&lt;/button&gt;</span></div><div class="line"><span class="string">   &lt;/div&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/template&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">// 引入连接通信的对象</span></div><div class="line"><span class="string">import Connector from '</span>./connector.js<span class="string">';</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">export default &#123;</span></div><div class="line"><span class="string">    data()&#123;</span></div><div class="line"><span class="string">        return &#123;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;,</span></div><div class="line"><span class="string">    methods:&#123;</span></div><div class="line"><span class="string">        call()&#123;</span></div><div class="line"><span class="string">            console.log('</span>打电话了<span class="string">')</span></div><div class="line"><span class="string">            Connector.$emit('</span>call<span class="string">','</span>上海<span class="string">')</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">    ,</span></div><div class="line"><span class="string">    props:['</span>text<span class="string">']</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/style&gt;</span></div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/cookie和session/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:34:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/cookie和session/">cookie和session</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/09/流式布局，响应式布局和rem/" class="archive-article-date">
-  	<time datetime="2017-02-09T08:24:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/09/流式布局，响应式布局和rem/">流式布局，响应式布局，弹性布局和rem</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/04/ajax和json以及jsonP/" class="archive-article-date">
-  	<time datetime="2017-01-04T10:54:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/AMD和CMD/" class="archive-article-date">
-  	<time datetime="2016-12-05T11:56:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/AMD和CMD/">require.js</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/23/vue起航4-子向父发起通信和过滤器/" alt="微信分享二维码">
+    </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/07/gulp和webpack/" class="archive-article-date">
-  	<time datetime="2016-10-07T11:12:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/22/babel-js代码转换器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue起航2 (babel)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/07/gulp和webpack/">gulp和webpack</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/兼容性问题/" class="archive-article-date">
-  	<time datetime="2016-08-13T14:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/兼容性问题/">兼容性问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/node-js/" class="archive-article-date">
-  	<time datetime="2016-08-13T02:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/node-js/">nodejs</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/10/一些小的知识点/" class="archive-article-date">
-  	<time datetime="2016-08-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/10/一些小的知识点/">一些小的知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/09/jQuery/" class="archive-article-date">
-  	<time datetime="2016-08-09T02:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/jQuery/">jQuery</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/10/好用的插件/" class="archive-article-date">
-  	<time datetime="2016-07-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/10/好用的插件/">好用的插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +323,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

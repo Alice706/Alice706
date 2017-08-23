@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | try you best</title>
+  <title>try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="try you best">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="try you best">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="try you best">
@@ -151,302 +151,179 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-作用域、沙箱、闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/11/作用域、沙箱、闭包/">作用域、沙箱、闭包</a>
+    </h1>
+  
+
+        
+        <a href="/2016/02/11/作用域、沙箱、闭包/" class="archive-article-date">
+  	<time datetime="2016-02-11T13:45:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-11</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>作用域</strong></p>
+<ul>
+<li>变量起作用的区域</li>
+<li>作用域链：在一个函数内部嵌套另外一个函数<br>注：不管在哪里调用，只管在哪里创建</li>
+</ul>
+<hr>
+<p><strong>闭包</strong></p>
+<ul>
+<li>定义：在函数内部定义的变量，在函数外部无法访问</li>
+</ul>
+<ol>
+<li>js中所有的函数都能形成闭包</li>
+<li>函数里面包裹其他函数，并且返回这个函数<br><div style="background-color:#eee;padding:10px"><br> function fn () {<br> var num = 123;<br> return function () {</div></li>
+</ol>
+<p>}<br>}<br>var n = fn();//结果：return 后面的函数体<br>n();<br></p>
+<hr>
+<p><strong>沙箱模式（自调用）</strong><br>作用：用于为一些来源不可信，无法判定意图的程序提供试验环境，对变量进行隔离<br>目的：减少全局污染<br>(function(){</p>
+<p>})()</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/cookie和session/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:34:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/cookie和session/">cookie和session</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/09/流式布局，响应式布局和rem/" class="archive-article-date">
-  	<time datetime="2017-02-09T08:24:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/09/流式布局，响应式布局和rem/">流式布局，响应式布局，弹性布局和rem</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/04/ajax和json以及jsonP/" class="archive-article-date">
-  	<time datetime="2017-01-04T10:54:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/04/ajax和json以及jsonP/">ajax和json以及jsonp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/02/11/作用域、沙箱、闭包/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/04/我的第一篇博客/">如何用hexo+github创建博客</a>
+    </h1>
+  
+
+        
+        <a href="/2016/02/04/我的第一篇博客/" class="archive-article-date">
+  	<time datetime="2016-02-04T10:54:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
+
+<h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
+
+<h3 id="4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><a href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server" class="headerlink" title="4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server"></a>4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</h3><div style="background-color:#eee;padding:10px;">提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>这个时候博客就搭建完成了，就这么几个步骤，我竟然花了一整天的时间才研究一个入门，泪奔不过总归是完成了，还是很有成就感的，撒花</div>
+
+<h2 id="二：markdown的使用中遇到的问题"><a href="#二：markdown的使用中遇到的问题" class="headerlink" title="二：markdown的使用中遇到的问题"></a>二：markdown的使用中遇到的问题</h2><h3 id="1-源文件的位置"><a href="#1-源文件的位置" class="headerlink" title="1.源文件的位置"></a>1.源文件的位置</h3><div style="background-color:#eee;padding:10px;">源文件在本地的<em>/sources/_posts/</em>.md中,找到这个文件，就可以在里面通过markdown语法来写博客了</div>
+
+<h3 id="2-如何发布"><a href="#2-如何发布" class="headerlink" title="2.如何发布"></a>2.如何发布</h3><div style="background-color:#eee;padding:10px;">写好博客以后，在git bash中输入命令行：<strong>hexo g</strong>用来生成完成的博客，通过<strong>hexo s</strong>查看页面效果</div>
+
+<h3 id="3-遇到的乱码问题"><a href="#3-遇到的乱码问题" class="headerlink" title="3.遇到的乱码问题"></a>3.遇到的乱码问题</h3><div style="background-color:#eee;padding:10px;">在可以自己写博客时，我的心情是万分激动的，但是当我去页面查看时，发现我写的中文全部都是乱码，<br>乱码，乱码，重要的事情说三遍，起初以为是自己的markdown语法写错了，后来各种百度，各种查找，终于<br>在一篇文章中看到，原来是编码格式的问题，只要：<strong>将博客文件保存为UTF-8用记事本打开本地的博客文件“xxx.md”，然后点“另存为”，“编码(E):”选择“UTF-8”，点击“保存”，替换原文件。</strong><br></div>
+
+<h3 id="4-如何创建一篇新的博客"><a href="#4-如何创建一篇新的博客" class="headerlink" title="4.如何创建一篇新的博客"></a>4.如何创建一篇新的博客</h3><div style="background-color:#eee;padding:10px;">这个只要在命令行输入：<strong>hexo new “博客名称”</strong> 就妥妥的新建了一个新的博客，你可以去源文件的位置去找到这个文件</div>
+
+<h3 id="5-关于markddown语法"><a href="#5-关于markddown语法" class="headerlink" title="5.关于markddown语法"></a>5.关于markddown语法</h3><div style="background-color:#eee;padding:10px;">语法这个东西其实不多，直接百度markdown怎么写，或者去官网看看</div>
+
+<h2 id="三：上传到github上"><a href="#三：上传到github上" class="headerlink" title="三：上传到github上"></a>三：上传到github上</h2><div style="background-color:#eee;padding:10px;">在github上创建一个：<strong>自己的用户名.github.io</strong>的文件<br>在blog（本地创建的目录）下的public下 <strong>git bash here</strong>执行命令:<span style="color:red">git status用来查看状态，git add -A用来保存全部，git commit -m “存档的名字”</span>完成以后最后：<strong>git push 远程仓库的地址 master</strong>这里我用的是SSH的方式，可以免用户名和密码，具体的操作就不说了，想要知道可以百度<br></div><br>## 四：访问自己的博客<br><div style="background-color:#eee;padding:10px;">上传成功以后，在网页输入：<strong>你的用户名.github.io</strong>就可以访问自己的博客了</div>
+
+
+
+
+
+<hr>
+<ol>
+<li><p>用到的网址链接<br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网地址</a><br><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题网址</a></p>
+<hr>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/AMD和CMD/" class="archive-article-date">
-  	<time datetime="2016-12-05T11:56:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/AMD和CMD/">require.js</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/02/04/我的第一篇博客/">展开全文 >></a>
+        </p>
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/07/gulp和webpack/" class="archive-article-date">
-  	<time datetime="2016-10-07T11:12:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-07</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/07/gulp和webpack/">gulp和webpack</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/兼容性问题/" class="archive-article-date">
-  	<time datetime="2016-08-13T14:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/兼容性问题/">兼容性问题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/13/node-js/" class="archive-article-date">
-  	<time datetime="2016-08-13T02:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/node-js/">nodejs</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/10/一些小的知识点/" class="archive-article-date">
-  	<time datetime="2016-08-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/10/一些小的知识点/">一些小的知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/09/jQuery/" class="archive-article-date">
-  	<time datetime="2016-08-09T02:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/jQuery/">jQuery</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/10/好用的插件/" class="archive-article-date">
-  	<time datetime="2016-07-10T11:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/10/好用的插件/">好用的插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
     </nav>
   
 
@@ -470,9 +347,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
