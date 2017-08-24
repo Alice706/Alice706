@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="一：本地安装hexo初始化一个博客的方式1.电脑上需要安装 node.js 和 git2.通过git bash下载hexo 在git bash中通过 npm install hexo-cli -g下载hexo注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=https://registry.npm.taobao.org具体的建议先百度一下，防">
+<meta name="description" content="vue-router  路由哪里去 前端路由原理 监视当前的锚点值，根据锚点值得不同，在指定的地方，插入不同的模板内容基本使用 引入该对象 improt VueRouter from &amp;#39;vue-router&amp;#39;; 安装插件  Vue.use(VueRouter) 配置路由（创建一个关于当前实例的路由对象）let router = new VueRouter(构造选项) 构造选项{ro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何用hexo+github创建博客">
-<meta property="og:url" content="http://yoursite.com/2016/02/04/我的第一篇博客/index.html">
+<meta property="og:title" content="vue路由">
+<meta property="og:url" content="http://yoursite.com/2017/03/30/vue路由/index.html">
 <meta property="og:site_name" content="try you best">
-<meta property="og:description" content="一：本地安装hexo初始化一个博客的方式1.电脑上需要安装 node.js 和 git2.通过git bash下载hexo 在git bash中通过 npm install hexo-cli -g下载hexo注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=https://registry.npm.taobao.org具体的建议先百度一下，防">
-<meta property="og:updated_time" content="2017-08-17T03:48:44.370Z">
+<meta property="og:description" content="vue-router  路由哪里去 前端路由原理 监视当前的锚点值，根据锚点值得不同，在指定的地方，插入不同的模板内容基本使用 引入该对象 improt VueRouter from &amp;#39;vue-router&amp;#39;; 安装插件  Vue.use(VueRouter) 配置路由（创建一个关于当前实例的路由对象）let router = new VueRouter(构造选项) 构造选项{ro">
+<meta property="og:updated_time" content="2017-08-24T15:25:02.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何用hexo+github创建博客">
-<meta name="twitter:description" content="一：本地安装hexo初始化一个博客的方式1.电脑上需要安装 node.js 和 git2.通过git bash下载hexo 在git bash中通过 npm install hexo-cli -g下载hexo注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=https://registry.npm.taobao.org具体的建议先百度一下，防">
+<meta name="twitter:title" content="vue路由">
+<meta name="twitter:description" content="vue-router  路由哪里去 前端路由原理 监视当前的锚点值，根据锚点值得不同，在指定的地方，插入不同的模板内容基本使用 引入该对象 improt VueRouter from &amp;#39;vue-router&amp;#39;; 安装插件  Vue.use(VueRouter) 配置路由（创建一个关于当前实例的路由对象）let router = new VueRouter(构造选项) 构造选项{ro">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>如何用hexo+github创建博客 | try you best</title>
+<title>vue路由 | try you best</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -256,11 +256,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue路由" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/04/我的第一篇博客/" class="article-date">
-      <time datetime="2016-02-04T10:54:52.000Z" itemprop="datePublished">2016-02-04</time>
+      <a href="/2017/03/30/vue路由/" class="article-date">
+      <time datetime="2017-03-30T14:36:10.000Z" itemprop="datePublished">2017-03-30</time>
 </a>
 
 
@@ -275,7 +275,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      如何用hexo+github创建博客
+      vue路由
     </h1>
   
 
@@ -292,34 +292,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="一：本地安装hexo初始化一个博客的方式"><a href="#一：本地安装hexo初始化一个博客的方式" class="headerlink" title="一：本地安装hexo初始化一个博客的方式"></a>一：本地安装hexo初始化一个博客的方式</h2><h3 id="1-电脑上需要安装-node-js-和-git"><a href="#1-电脑上需要安装-node-js-和-git" class="headerlink" title="1.电脑上需要安装 node.js 和 git"></a>1.电脑上需要安装 <em>node.js</em> 和 <em>git</em></h3><h3 id="2-通过git-bash下载hexo"><a href="#2-通过git-bash下载hexo" class="headerlink" title="2.通过git bash下载hexo"></a>2.通过git bash下载hexo</h3><div style="background-color:#eee;padding:10px;"> 在git bash中通过 <strong>npm install hexo-cli -g</strong>下载hexo<br>注：如果npm比较慢，可以先安装淘宝的cnpmnpm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>具体的建议先百度一下，防止这个语法已经变更了</div>
-
-<h3 id="3-hexo-init-blog-通过这个命令初始化一个博客"><a href="#3-hexo-init-blog-通过这个命令初始化一个博客" class="headerlink" title="3.hexo init blog 通过这个命令初始化一个博客"></a>3.hexo init blog 通过这个命令初始化一个博客</h3><div style="background-color:#eee;padding:10px;"><strong>我在安装时遇到一个坑</strong>在 hexo init最后会出现一个乱码，然后提示:<br><span style="color:red;"><em>npm WARN deprecated swing@1.4.2: This package is no longer maintained</em></span><br>这个坑是真的踩的扎心了，折腾了我很久，网上百度也是五花八门的答案，后来机缘巧合之下让我找到了答案，原来只是<strong>网络慢</strong>，一直在下载中，所以，老铁们，遇到这个问题，丢在那里，什么都不要做，过会就好了</div>
-
-<h3 id="4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><a href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server" class="headerlink" title="4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server"></a>4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</h3><div style="background-color:#eee;padding:10px;">提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>这个时候博客就搭建完成了，就这么几个步骤，我竟然花了一整天的时间才研究一个入门，泪奔不过总归是完成了，还是很有成就感的，撒花</div>
-
-<h2 id="二：markdown的使用中遇到的问题"><a href="#二：markdown的使用中遇到的问题" class="headerlink" title="二：markdown的使用中遇到的问题"></a>二：markdown的使用中遇到的问题</h2><h3 id="1-源文件的位置"><a href="#1-源文件的位置" class="headerlink" title="1.源文件的位置"></a>1.源文件的位置</h3><div style="background-color:#eee;padding:10px;">源文件在本地的<em>/sources/_posts/</em>.md中,找到这个文件，就可以在里面通过markdown语法来写博客了</div>
-
-<h3 id="2-如何发布"><a href="#2-如何发布" class="headerlink" title="2.如何发布"></a>2.如何发布</h3><div style="background-color:#eee;padding:10px;">写好博客以后，在git bash中输入命令行：<strong>hexo g</strong>用来生成完成的博客，通过<strong>hexo s</strong>查看页面效果</div>
-
-<h3 id="3-遇到的乱码问题"><a href="#3-遇到的乱码问题" class="headerlink" title="3.遇到的乱码问题"></a>3.遇到的乱码问题</h3><div style="background-color:#eee;padding:10px;">在可以自己写博客时，我的心情是万分激动的，但是当我去页面查看时，发现我写的中文全部都是乱码，<br>乱码，乱码，重要的事情说三遍，起初以为是自己的markdown语法写错了，后来各种百度，各种查找，终于<br>在一篇文章中看到，原来是编码格式的问题，只要：<strong>将博客文件保存为UTF-8用记事本打开本地的博客文件“xxx.md”，然后点“另存为”，“编码(E):”选择“UTF-8”，点击“保存”，替换原文件。</strong><br></div>
-
-<h3 id="4-如何创建一篇新的博客"><a href="#4-如何创建一篇新的博客" class="headerlink" title="4.如何创建一篇新的博客"></a>4.如何创建一篇新的博客</h3><div style="background-color:#eee;padding:10px;">这个只要在命令行输入：<strong>hexo new “博客名称”</strong> 就妥妥的新建了一个新的博客，你可以去源文件的位置去找到这个文件</div>
-
-<h3 id="5-关于markddown语法"><a href="#5-关于markddown语法" class="headerlink" title="5.关于markddown语法"></a>5.关于markddown语法</h3><div style="background-color:#eee;padding:10px;">语法这个东西其实不多，直接百度markdown怎么写，或者去官网看看</div>
-
-<h2 id="三：上传到github上"><a href="#三：上传到github上" class="headerlink" title="三：上传到github上"></a>三：上传到github上</h2><div style="background-color:#eee;padding:10px;">在github上创建一个：<strong>自己的用户名.github.io</strong>的文件<br>在blog（本地创建的目录）下的public下 <strong>git bash here</strong>执行命令:<span style="color:red">git status用来查看状态，git add -A用来保存全部，git commit -m “存档的名字”</span>完成以后最后：<strong>git push 远程仓库的地址 master</strong>这里我用的是SSH的方式，可以免用户名和密码，具体的操作就不说了，想要知道可以百度<br></div><br>## 四：访问自己的博客<br><div style="background-color:#eee;padding:10px;">上传成功以后，在网页输入：<strong>你的用户名.github.io</strong>就可以访问自己的博客了</div>
-
-
-
-
-
-<hr>
-<ol>
-<li><p>用到的网址链接<br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网地址</a><br><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题网址</a></p>
-<hr>
+        <p><strong>vue-router</strong></p>
+<ul>
+<li>路由哪里去</li>
+<li>前端路由原理<ul>
+<li>监视当前的锚点值，根据锚点值得不同，在指定的地方，插入不同的模板内容<br><strong>基本使用</strong></li>
+<li>引入该对象 <code>improt VueRouter from &#39;vue-router&#39;;</code></li>
+<li>安装插件  <code>Vue.use(VueRouter)</code></li>
+<li>配置路由（创建一个关于当前实例的路由对象）<br><code>let router = new VueRouter(构造选项)</code><ul>
+<li>构造选项<br><code>{routes:[{锚点值，显示什么}]}</code></li>
+</ul>
 </li>
-</ol>
+<li>留坑<br><code>&lt;router-view&gt;&lt;/router-view&gt;</code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">main.js页面</div><div class="line"></div><div class="line"> <span class="comment">// 引入vue</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="comment">// 引入app.vue</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line"><span class="comment">// 引入vue-router</span></div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span>;</div><div class="line"><span class="comment">// 加载vue-router插件</span></div><div class="line">Vue.use(VueRouter);</div><div class="line"><span class="comment">// 加载home.vue模块</span></div><div class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./home.vue'</span>;</div><div class="line"><span class="comment">// 实例化vue-router</span></div><div class="line"><span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes:[</div><div class="line">      &#123;<span class="attr">path</span>:<span class="string">'/home'</span>,<span class="attr">component</span>:Home&#125; <span class="comment">//path:去的页面必须有</span></div><div class="line">                                    <span class="comment">//component:配置对应的路由页面</span></div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"><span class="comment">// 实例化vue</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    el:<span class="string">'#app'</span>,</div><div class="line">    render:<span class="function"><span class="params">c</span>=&gt;</span>c(App),</div><div class="line">    router <span class="comment">//告诉vue我配置了路由</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.vue页面</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;div&gt;我是头部&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        &lt;router-view&gt;&lt;/</span>router-view&gt; <span class="comment">//home.vue的页面最终渲染在这里</span></div><div class="line">        &lt;div&gt;我是底部&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/template&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>router-link</strong><br> <code>&lt;router-link :to=&quot;/xxx&quot;&gt;&lt;/router-view&gt;</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"> main.js中</div><div class="line"></div><div class="line"> <span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./Home.vue'</span>;</div><div class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">'./header.vue'</span>;</div><div class="line"></div><div class="line">Vue.use(VueRouter);</div><div class="line"><span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes:[</div><div class="line">      &#123;<span class="attr">path</span>:<span class="string">'/home'</span>,<span class="attr">component</span>:Home&#125;,</div><div class="line">      &#123;<span class="attr">path</span>:<span class="string">'/header'</span>,<span class="attr">component</span>:Header&#125;</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    el:<span class="string">'#app'</span>,</div><div class="line">    render:<span class="function"><span class="params">c</span>=&gt;</span>c(App),</div><div class="line">    router</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.vue中</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">       &lt;div&gt;</div><div class="line">           &lt;router-link to=<span class="string">"Home"</span>&gt;去home页&lt;<span class="regexp">/router-link&gt; /</span><span class="regexp">/到页面中自动生成a标签</span></div><div class="line"><span class="regexp">           &lt;router-link to="Header"&gt;去页Header页&lt;/</span>router-link&gt;</div><div class="line">       &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">       &lt;router-view&gt;&lt;/</span>router-view&gt;</div><div class="line">    &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>template&gt;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -328,13 +317,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/02/04/我的第一篇博客/">如何用hexo+github创建博客</a></p>
+        <p><span>Title:</span><a href="/2017/03/30/vue路由/">vue路由</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">shc</a></p>
-        <p><span>Created:</span>2016-02-04, 18:54:52</p>
-        <p><span>Updated:</span>2017-08-17, 11:48:44</p>
+        <p><span>Created:</span>2017-03-30, 22:36:10</p>
+        <p><span>Updated:</span>2017-08-24, 23:25:02</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/02/04/我的第一篇博客/" title="如何用hexo+github创建博客">http://yoursite.com/2016/02/04/我的第一篇博客/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/02/04/我的第一篇博客/　　By shc" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/03/30/vue路由/" title="vue路由">http://yoursite.com/2017/03/30/vue路由/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2017/03/30/vue路由/　　By shc" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,11 +336,17 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/02/11/作用域、沙箱、闭包/">
-                    作用域、沙箱、闭包
+                <a href="/2017/04/11/对象/">
+                    对象、面向对象、原型
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/03/29/vue-ref和watch/">
+                    vue中ref和watch和计算属性
+                </a>
+            </div>
         
     </nav>
 
@@ -361,7 +356,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一：本地安装hexo初始化一个博客的方式"><span class="toc-number">1.</span> <span class="toc-text">一：本地安装hexo初始化一个博客的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-电脑上需要安装-node-js-和-git"><span class="toc-number">1.1.</span> <span class="toc-text">1.电脑上需要安装 node.js 和 git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-通过git-bash下载hexo"><span class="toc-number">1.2.</span> <span class="toc-text">2.通过git bash下载hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-hexo-init-blog-通过这个命令初始化一个博客"><span class="toc-number">1.3.</span> <span class="toc-text">3.hexo init blog 通过这个命令初始化一个博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-以上完成以后，通过命令cd-blog到blog文件夹目录下，输入：hexo-server"><span class="toc-number">1.4.</span> <span class="toc-text">4.以上完成以后，通过命令cd blog到blog文件夹目录下，输入：hexo server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二：markdown的使用中遇到的问题"><span class="toc-number">2.</span> <span class="toc-text">二：markdown的使用中遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-源文件的位置"><span class="toc-number">2.1.</span> <span class="toc-text">1.源文件的位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-如何发布"><span class="toc-number">2.2.</span> <span class="toc-text">2.如何发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-遇到的乱码问题"><span class="toc-number">2.3.</span> <span class="toc-text">3.遇到的乱码问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-如何创建一篇新的博客"><span class="toc-number">2.4.</span> <span class="toc-text">4.如何创建一篇新的博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-关于markddown语法"><span class="toc-number">2.5.</span> <span class="toc-text">5.关于markddown语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三：上传到github上"><span class="toc-number">3.</span> <span class="toc-text">三：上传到github上</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -397,7 +392,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"如何用hexo+github创建博客　| try you best　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"vue路由　| try you best　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -417,7 +412,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/02/11/作用域、沙箱、闭包/" title="Pre: 作用域、沙箱、闭包">
+            <a href="/2017/04/11/对象/" title="Pre: 对象、面向对象、原型">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -425,7 +420,9 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2017/03/29/vue-ref和watch/" title="Next: vue中ref和watch和计算属性">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
