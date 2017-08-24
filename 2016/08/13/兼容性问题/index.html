@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>兼容性问题 | try you best</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="table里不加tbody在ie8里整个表格就不显示 ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   阻止事件冒泡和捕获 ie9之前 event.canceBubble = true;">
+  <meta name="description" content="html  table里不加tbody在ie8里整个表格就不显示 不同浏览器的默认内外边距不同 设置统一的maring:0 ;padding :0    CSS  ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   ie浏览器的注释文档    ie8支持:first-child,但不支持:last-child。因为前者是css2.1标准，后者是cs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="兼容性问题">
 <meta property="og:url" content="http://yoursite.com/2016/08/13/兼容性问题/index.html">
 <meta property="og:site_name" content="try you best">
-<meta property="og:description" content="table里不加tbody在ie8里整个表格就不显示 ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   阻止事件冒泡和捕获 ie9之前 event.canceBubble = true;">
-<meta property="og:updated_time" content="2017-08-17T02:24:03.503Z">
+<meta property="og:description" content="html  table里不加tbody在ie8里整个表格就不显示 不同浏览器的默认内外边距不同 设置统一的maring:0 ;padding :0    CSS  ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   ie浏览器的注释文档    ie8支持:first-child,但不支持:last-child。因为前者是css2.1标准，后者是cs">
+<meta property="og:updated_time" content="2017-08-24T07:29:33.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="兼容性问题">
-<meta name="twitter:description" content="table里不加tbody在ie8里整个表格就不显示 ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   阻止事件冒泡和捕获 ie9之前 event.canceBubble = true;">
+<meta name="twitter:description" content="html  table里不加tbody在ie8里整个表格就不显示 不同浏览器的默认内外边距不同 设置统一的maring:0 ;padding :0    CSS  ie5-8不支持opacity 使用filter:alpha(opacity=60);ie5-7   ie浏览器的注释文档    ie8支持:first-child,但不支持:last-child。因为前者是css2.1标准，后者是cs">
   
     <link rel="alternative" href="/atom.xml" title="try you best" type="application/atom+xml">
   
@@ -173,14 +173,73 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
+        <p><strong>html</strong></p>
+<ol>
 <li>table里不加tbody在ie8里整个表格就不显示</li>
+<li>不同浏览器的默认内外边距不同<ul>
+<li>设置统一的maring:0 ;padding :0</li>
+</ul>
+</li>
+</ol>
+<p><strong>CSS</strong></p>
+<ol>
 <li>ie5-8不支持opacity<ul>
 <li>使用filter:alpha(opacity=60);ie5-7</li>
 </ul>
 </li>
+<li>ie浏览器的注释文档<ul>
+<li><!--[if IE 8 ]> <html class="ie8" lang="en"> <![endif]--></li>
+</ul>
+</li>
+<li>ie8支持:first-child,但不支持:last-child。<br>因为前者是css2.1标准，后者是css3标准</li>
+<li>图片在块元素中产生空白行<ul>
+<li>设置vertical-align:middle</li>
+</ul>
+</li>
+<li>去除链接虚线边框的问题 ： 当点击超链接后，ie6/7/8  ff会出现虚线边框 ,而opera、safari没有虚线边框<ul>
+<li>解决： ie6/7中 设置为a { blr:expression(this.onFocus=this.blur()) }  ie8 和 ff 都不支持expression  在ie8 、ff中设置为  :focus { outline: none; }</li>
+</ul>
+</li>
+<li>input设置了左右padding，but输入较多内容时padding还是会消失。这个问题是无解的，ie浏览器她就是这么渲染input的，解决方法是在input 外面套一层div，用div设置左右padding，border，width和height，input只需要设置width和weight为100% 即可。另外，正常来讲，如果没有明确设置height的值，那么设置的line-height值就是height的值，but对于ie8，如果input 设置了 line-height，那么input必须设置height，否则input的内容显示有问题，会上下隐藏部分内容，她就是要躲猫猫。</li>
+</ol>
+<p><strong>JS</strong></p>
+<ol>
 <li>阻止事件冒泡和捕获<ul>
 <li>ie9之前 event.canceBubble = true;</li>
+<li>阻止默认事件<br>  说明： preventDefault()和returnValue()前者标准写法，后者IE写法。<br>  解决方法：一般情况建议直接使用return false阻止，但和取消默认事件的含义是不同的。</li>
+</ul>
+</li>
+<li>h5中操作dom元素的document.querySelector</li>
+<li>问题说明：innerText在IE中能正常工作，但是innerText在FireFox中却不行。 <ul>
+<li>解决方法：在非IE浏览器中使用textContent代替innerText。</li>
+</ul>
+</li>
+<li>offset问题<ul>
+<li>var scroll_top=window.pageYOffset || document.documentElement.scrollTop</li>
+</ul>
+</li>
+<li><p>currentstyle和getComputedStyle兼容问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oAbc = <span class="built_in">document</span>.getElementById(<span class="string">"abc"</span>);</div><div class="line">    <span class="keyword">if</span>(oAbc.currentStyle) &#123;</div><div class="line">            <span class="comment">//IE、Opera</span></div><div class="line">            alert(<span class="string">"我支持currentStyle"</span>);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">//FF、chrome、safari</span></div><div class="line">            alert(<span class="string">"我不支持currentStyle"</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>关于使用事件 event对象，出现的兼容性问题</p>
+<pre><code class="js"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{
+        <span class="keyword">var</span> e=e||event; 
+        alert(e.screenX);
+    }
+</code></pre>
+</li>
+</ol>
+<p>**浏览器兼容性相关问题及其解决思路</p>
+<p>1、目前，各主流浏览器的新版本，对于  W3C  的标准支持很好，因此，首先保证代码符合 W3C 的标准，这是解决浏览器兼容问题的前提。</p>
+<pre><code>其次，对于某些支持受限的属性，针对不同的浏览器添加相应的前缀，比如-webkit-、-o-、-moz-。**
+</code></pre><p><strong>移动端</strong></p>
+<ol>
+<li>如何判断用户进来的机型<ul>
+<li>navigator.userAgent</li>
+</ul>
+</li>
+<li>如何解决手机横屏字体大小不变<ul>
+<li>text-size-adjust:none</li>
 </ul>
 </li>
 </ol>
