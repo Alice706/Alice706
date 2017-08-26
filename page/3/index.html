@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -255,9 +255,147 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-一些小的知识点" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/10/一些小的知识点/" class="article-date">
+      <time datetime="2016-08-10T11:54:37.000Z" itemprop="datePublished">2016-08-10</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/10/一些小的知识点/">一些小的知识点</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>link和@import的区别</strong></p>
+<ol>
+<li>link属于html标签，而@import是css提供的。</li>
+<li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
+<li>link是xhtml标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
+<li>link方式样式的权重高于@import的。</li>
+<li>link支持使用js控制dom改变样式<br><strong>CDN内容分布网络</strong></li>
+</ol>
+<ul>
+<li>避开网络上有可能影响数据传输速度和稳定性的瓶颈和环节<br><strong>return false</strong></li>
+<li>jQuery中，既能阻止事件冒泡，也能阻止默认事件</li>
+<li>js中，只能阻止默认事件<br><strong>less</strong></li>
+<li>l. ess是css预处理器，1添加了一些编程的特性</li>
+<li><ol>
+<li>让css代码更简洁，3代码更直观，便于后期维护，减少无意义的机械劳动<br><strong>eval</strong></li>
+</ol>
+</li>
+<li>把字符串的内容作为js的代码执行</li>
+<li>和Function的区别：Function()中的方法体是字符串，必须调用才能执行<br><strong>html5语义化的理解</strong></li>
+<li>用正确的标签包含正确的内容<br><strong>cookie、sessionStorage、localeStorage的区别</strong></li>
+<li>cookie是存储在浏览器端，并且随浏览器的请求一起发送到服务器端的，它有一定的过期时间，到了过期时间自动会消失。sessionStorage和localeStorage也是存储在客户端的，同属于web Storage，比cookie的存储大小要大有8m，cookie只有4kb，localeStorage是持久化的存储在客户端，如果用户不手动清除的话，不会自动消失，会一直存在，sessionStorage也是存储在客户端，但是它的存活时间是在一个回话期间，只要浏览器的回话关闭了就会自动消失。<br><strong>重构、回流</strong></li>
+<li>浏览器的重构指的是改变每个元素外观时所触发的浏览器行为，比如颜色，背景等样式发生了改变而进行的重新构造新外观的过程。重构不会引发页面的重新布局，不一定伴随着回流，回流指的是浏览器为了重新渲染页面的需要而进行的重新计算元素的几何大小和位置的，他的开销是非常大的，回流可以理解为渲染树需要重新进行计算，一般最好触发元素的重构，避免元素的回流；比如通过通过添加类来添加css样式，而不是直接在DOM上设置，当需要操作某一块元素时候，最好使其脱离文档流，这样就不会引起回流了，比如设置position：absolute或者fixed，或者display：none，等操作结束后在显示。</li>
+</ul>
+<p><strong>内置对象、宿主对象、本地对象</strong></p>
+<ul>
+<li>内置对象有些对象有自己的属性和方法，无需实例化，这就是内置对象<ul>
+<li>内置对象： Math Global(isNaN,parseInt(),parseFloat是它的方法)</li>
+</ul>
+</li>
+<li>本地对象必须new实例化才能使用其属性和方法的是本地对象<ul>
+<li>常见本地对象：Object Function Array Boolean Number Date RegExp</li>
+</ul>
+</li>
+<li>宿主对象：window document body<br><strong>跨域的几种方式</strong></li>
+<li>jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特性，是一种新协议）跨域、设置代理服务器（由服务器替我们向不同源的服务器请求数据）、CORS（跨源资源共享，cross origin resource sharing）、iframe跨域、postMessage(包含iframe的页面向iframe传递消息)</li>
+</ul>
+<p><strong>http状态码</strong></p>
+<ul>
+<li><p>http状态码是表示服务器对请求的响应状态，主要分为以下几个部分</p>
+<ul>
+<li><p>1：这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束</p>
+</li>
+<li><p>2：表示请求成功，</p>
+</li>
+<li><p>3：表示重定向</p>
+</li>
+<li><p>4：表示客户端错误</p>
+</li>
+<li><p>5：表示服务器端错误</p>
+</li>
+</ul>
+<p><strong>怪异模式和标准模式</strong></p>
+<ul>
+<li>如果有DTD(文档声明)，就是标准模式，因为在ie6之前没有DTD</li>
+<li>标准模式是指浏览器按照W3C标准解析执行代码，怪异模式则是浏览器自己的方式解析执行代码</li>
+</ul>
+<p><strong>web标准</strong></p>
+<ul>
+<li>web标准简单来说可以分为结构、表现、行为</li>
+</ul>
+<p><strong>一次Js请求一般情况下有哪些地方会有缓存</strong></p>
+<ul>
+<li><p>DNS，CDN（内容分发网络）,浏览器，服务器</p>
+<p><strong>如何让一个dom元素不显示在浏览器的可视范围内</strong></p>
+<ol>
+<li>display:none</li>
+<li>visibility:hidden</li>
+<li>设置宽高为0</li>
+<li>设置透明度为0</li>
+<li>z-index:3000px</li>
+<li><strong>解决行内块元素换行有间隙的问题</strong>&lt;</li>
+<li>将元素写成一行，中间不换行</li>
+<li>设置父元素的font-size:0,再给自己设置字体大小</li>
+<li>设置margin负值</li>
+<li>让行内块元素浮动</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>什么是缓存Cache? 为什么人们要使用它?</strong><br>一个使用缓存Cache的站点会监听客户端向服务器端发出的请求，并保存服务器端的回应——比如HTML页面、图片等文件。接着，如果有另外一个使用相同URL发送请求，他能够使用之前已经保存下来的反馈文件，而不是再次向服务器发出请求。</p>
+<p>有两个主要的理由让人们使用缓存:</p>
+<p>减少延迟 — 因为所发出的网页请求是指向更接近客户端的缓存而不再是源服务器端，因此请求所花费时间更短，这让网站看上去反应更快。<br>降低网络负荷 — 因为缓存文件可以重复使用,节省了不少的带宽.这也给用户省了不少流量.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-jQuery" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -562,14 +700,14 @@
                 2016-2017 shc
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -578,7 +716,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -611,9 +749,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
