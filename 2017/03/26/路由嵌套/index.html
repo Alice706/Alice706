@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849main.js中import Vue from &apos;vue&apos;;import VueRouter from &apos;vue-router&apos;;import App from &apos;./app.vue&apos;;import Music from">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue起航2 (babel)">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/babel-js代码转换器/index.html">
+<meta property="og:title" content="路由嵌套">
+<meta property="og:url" content="http://yoursite.com/2017/03/26/路由嵌套/index.html">
 <meta property="og:site_name" content="try you best">
-<meta property="og:description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
-<meta property="og:updated_time" content="2017-08-23T08:19:26.854Z">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849main.js中import Vue from &apos;vue&apos;;import VueRouter from &apos;vue-router&apos;;import App from &apos;./app.vue&apos;;import Music from">
+<meta property="og:updated_time" content="2017-08-26T13:09:51.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue起航2 (babel)">
-<meta name="twitter:description" content="babel js代码转换器可以用来转换ES6/ES7/react… =&amp;gt;ES5的代码配合webpack一起使用  缺点： 使用babel默认只解析关键字，不处理函数 解决方案： 设置 ES6,插件：转换函数   创建配置文件： .babelrc文件 数据是一个Json对象 {“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’">
+<meta name="twitter:title" content="路由嵌套">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849main.js中import Vue from &apos;vue&apos;;import VueRouter from &apos;vue-router&apos;;import App from &apos;./app.vue&apos;;import Music from">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue起航2 (babel) | try you best</title>
+<title>路由嵌套 | try you best</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -256,11 +256,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-babel-js代码转换器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-路由嵌套" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/22/babel-js代码转换器/" class="article-date">
-      <time datetime="2017-03-22T11:18:34.000Z" itemprop="datePublished">2017-03-22</time>
+      <a href="/2017/03/26/路由嵌套/" class="article-date">
+      <time datetime="2017-03-26T11:51:35.000Z" itemprop="datePublished">2017-03-26</time>
 </a>
 
 
@@ -275,7 +275,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue起航2 (babel)
+      路由嵌套
     </h1>
   
 
@@ -292,35 +292,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="babel-js代码转换器"><a href="#babel-js代码转换器" class="headerlink" title="babel js代码转换器"></a>babel js代码转换器</h3><p><strong>可以用来转换ES6/ES7/react… =&gt;ES5的代码</strong><br><strong>配合webpack一起使用</strong></p>
-<ul>
-<li>缺点：<ul>
-<li>使用babel默认只解析关键字，不处理函数</li>
-<li>解决方案： 设置 ES6,插件：转换函数</li>
-</ul>
-</li>
-<li>创建配置文件：<ul>
-<li>.babelrc文件</li>
-<li>数据是一个Json对象<ul>
-<li>{“presets(预设)”:[‘es2015’],”plugins(插件)”:[‘transform-runtime’]}</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong>package.json中的代码</strong></p>
-<ul>
-<li>dependencies：项目生产所依赖的模块</li>
-<li>devDependencies：项目开发所需要的模块</li>
-<li>–save参数表示将该模块写入dependencies属性，</li>
-<li>–save-dev表示将该模块写入devDependencies属性。<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">   <span class="string">"dev"</span>: <span class="string">"node_modules\\.bin\\webpack-dev-server --inline --hot --open --port 8080"</span>, 开发环境</div><div class="line">   <span class="string">"build"</span>:<span class="string">"webpack"</span>  生产环境（产品上线）</div><div class="line"> &#125;,</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>常用指令</strong></p>
-<p> 注： v-bind:class可以简写为 :class<br> v-bind是给属性赋值<br>      v-on:click=”<em>*</em>“可以简写为: @click<br>      v-on是给事件做绑定，配合methods使用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"> &lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;div :<span class="class"><span class="keyword">class</span></span>=<span class="string">"c1"</span>&gt;我是方块一&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">     &lt;div :class="c2"&gt;我是方块二&lt;/</span>div&gt;</div><div class="line">     &lt;button v-on:click=<span class="string">"changecolor"</span>&gt;切换颜色&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">        </span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">export default &#123;</span></div><div class="line"><span class="regexp">    data()&#123;</span></div><div class="line"><span class="regexp">        return &#123;</span></div><div class="line"><span class="regexp">            c1:'red',</span></div><div class="line"><span class="regexp">            c2:'green'</span></div><div class="line"><span class="regexp">        &#125;</span></div><div class="line"><span class="regexp">    &#125;,</span></div><div class="line"><span class="regexp">    methods:&#123;</span></div><div class="line"><span class="regexp">        changecolor()&#123;</span></div><div class="line"><span class="regexp">            this.c1='green',</span></div><div class="line"><span class="regexp">            this.c2="red"</span></div><div class="line"><span class="regexp">        &#125;</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">div div&#123;</div><div class="line">    height:<span class="number">200</span>px;</div><div class="line">&#125;</div><div class="line">.red&#123;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line">.green&#123;</div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line">    </div><div class="line">&lt;<span class="regexp">/style&gt;</span></div></pre></td></tr></table></figure></p>
-<p><strong>基本指令</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">    &lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">      &lt;div v-text=<span class="string">"hello"</span>&gt;&lt;/div&gt;</div><div class="line">      &lt;div v-html=<span class="string">"vHtml"</span>&gt;&lt;/div&gt;</div><div class="line">      &lt;div v-<span class="keyword">if</span>=<span class="string">"vIf"</span>&gt;我是通过添加删除dom节点&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">      &lt;div v-show="vShow"&gt;我是通过设置属性display:none&lt;/</span>div&gt;</div><div class="line">      &lt;input v-model=<span class="string">"value"</span>&gt;&#123;&#123;value&#125;&#125;</div><div class="line">      &lt;<span class="regexp">/hr&gt;</span></div><div class="line"><span class="regexp">      &lt;input v-bind:value="single"&gt;&#123;&#123;single&#125;&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">  &lt;/</span>div&gt;</div><div class="line">    </div><div class="line">&lt;<span class="regexp">/template&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">export default &#123;</span></div><div class="line"><span class="regexp">    data()&#123;</span></div><div class="line"><span class="regexp">        return &#123;</span></div><div class="line"><span class="regexp">            hello:'类似js中的innerText',</span></div><div class="line"><span class="regexp">            vHtml:'&lt;h3&gt;类似js中的innerHTML&lt;/</span>h3&gt;<span class="string">',</span></div><div class="line"><span class="string">            vIf:true,</span></div><div class="line"><span class="string">            vShow:true,</span></div><div class="line"><span class="string">            value:'</span>我是双向数据绑定,我改变后面的内容跟着变<span class="string">',</span></div><div class="line"><span class="string">            single:'</span>我是单向数据绑定，我改变，后面数据不变<span class="string">'</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;style&gt;&lt;/style&gt;</span></div></pre></td></tr></table></figure></p>
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">main.js中</div><div class="line"></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line"><span class="keyword">import</span> Music <span class="keyword">from</span> <span class="string">'./music.vue'</span>;</div><div class="line"><span class="keyword">import</span> Movie <span class="keyword">from</span> <span class="string">'./movie.vue'</span>;</div><div class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./home.vue'</span>;</div><div class="line"></div><div class="line">Vue.use(VueRouter);</div><div class="line"></div><div class="line"><span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes:[ </div><div class="line">     &#123;<span class="attr">name</span>:<span class="string">'home'</span>,<span class="attr">path</span>:<span class="string">'/home'</span>,<span class="attr">component</span>:Home,<span class="attr">children</span>:[</div><div class="line">        &#123;<span class="attr">name</span>:<span class="string">'home.music'</span>,<span class="attr">path</span>:<span class="string">'music'</span>,<span class="attr">component</span>:Music&#125;, <span class="comment">//home.music意思是home 下的music可以直接写music</span></div><div class="line">        &#123;<span class="attr">name</span>:<span class="string">'home.movie'</span>,<span class="attr">path</span>:<span class="string">'movie'</span>,<span class="attr">component</span>:Movie&#125;,</div><div class="line">     ]&#125; <span class="comment">//路由套路由，添加一个孩子项，其中，home的path必须写/,子不能写</span></div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    el:<span class="string">'#app'</span>,</div><div class="line">    render:<span class="function"><span class="params">c</span>=&gt;</span>c(App),</div><div class="line">    router</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.vue中</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;router-link :to=<span class="string">"&#123;name:'home'&#125;"</span>&gt;去首页&lt;<span class="regexp">/router-link&gt;</span></div><div class="line"><span class="regexp">    &lt;router-view&gt;&lt;/</span>router-view&gt;</div><div class="line">    &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>template&gt;</div><div class="line"></div><div class="line">home.vue中</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;div <span class="class"><span class="keyword">class</span> </span>= <span class="string">'c'</span>&gt;我是首页&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">        &lt;router-link :to="&#123;name:'music'&#125;"&gt;音乐&lt;/</span>router-link&gt;</div><div class="line">        &lt;router-link :to=<span class="string">"&#123;name:'movie'&#125;"</span>&gt;电影&lt;<span class="regexp">/router-link&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">        &lt;router-view&gt;&lt;/</span>router-view&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>template&gt;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -329,13 +301,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2017/03/22/babel-js代码转换器/">vue起航2 (babel)</a></p>
+        <p><span>本文標題:</span><a href="/2017/03/26/路由嵌套/">路由嵌套</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">shc</a></p>
-        <p><span>發布時間:</span>2017-03-22, 19:18:34</p>
-        <p><span>最後更新:</span>2017-08-23, 16:19:26</p>
+        <p><span>發布時間:</span>2017-03-26, 19:51:35</p>
+        <p><span>最後更新:</span>2017-08-26, 21:09:51</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2017/03/22/babel-js代码转换器/" title="vue起航2 (babel)">http://yoursite.com/2017/03/22/babel-js代码转换器/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/22/babel-js代码转换器/　　作者: shc" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/03/26/路由嵌套/" title="路由嵌套">http://yoursite.com/2017/03/26/路由嵌套/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/26/路由嵌套/　　作者: shc" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -348,15 +320,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/23/vue起航4-子向父发起通信和过滤器/">
-                    vue起航4 子向父发起通信和过滤器
+                <a href="/2017/03/26/vue-resocrce-和-axios/">
+                    重定向 、 axios 、拦截器 
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/03/22/vue起航/">
-                    vue起航
+                <a href="/2017/03/25/vue中的过滤器/">
+                    vue中的过滤器
                 </a>
             </div>
         
@@ -368,7 +340,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#babel-js代码转换器"><span class="toc-number">1.</span> <span class="toc-text">babel js代码转换器</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -404,7 +376,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue起航2 (babel)　| try you best　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"路由嵌套　| try you best　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -424,7 +396,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/23/vue起航4-子向父发起通信和过滤器/" title="上一篇: vue起航4 子向父发起通信和过滤器">
+            <a href="/2017/03/26/vue-resocrce-和-axios/" title="上一篇: 重定向 、 axios 、拦截器 ">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -432,7 +404,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/03/22/vue起航/" title="下一篇: vue起航">
+            <a href="/2017/03/25/vue中的过滤器/" title="下一篇: vue中的过滤器">
                 <i class="fa fa-angle-right"></i>
             </a>
         
